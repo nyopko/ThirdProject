@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import Body from "./components/Body";
 import Login from "./components/Login";
 import NEO from './components/NEO';
-import News from './components/NEO';
+import News from './components/News';
 import Footer from "./components/Footer";
 import './App.css';
 

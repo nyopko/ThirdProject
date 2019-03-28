@@ -1,10 +1,10 @@
 import React from 'react';
 import './style.css';
 
-function NEO() {
+function News() {
   return (
         <p>News component here.</p>
     );
 }
 
-export default NEO;
+export default News;
