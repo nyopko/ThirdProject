@@ -4,13 +4,16 @@
   "description": "",
   "main": "server.js",
   "dependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^5.15.3",
+    "mocha": "^6.0.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "^2.1.8"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo Error: no test specified && exit 1",
     "start": "node server.js"
   },
   "repository": {
