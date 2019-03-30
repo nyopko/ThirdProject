@@ -5,11 +5,15 @@
   "main": "server.js",
   "dependencies": {
     "chai": "^4.2.0",
+    "dotenv": "^7.0.0",
     "eslint": "^5.15.3",
     "mocha": "^6.0.2",
+    "mysql": "^2.16.0",
+    "mysql2": "^1.6.5",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "^2.1.8"
+    "react-scripts": "^2.1.8",
+    "sequelize": "^5.2.7"
   },
   "devDependencies": {},
   "scripts": {
