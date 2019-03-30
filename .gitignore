@@ -23,4 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 
 package-lock.json
-client/node_modules
+/client/node_modules
+
