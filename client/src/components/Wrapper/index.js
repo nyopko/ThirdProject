@@ -4,7 +4,6 @@ import Header from '../Header';
 import Mars from '../Mars';
 import Planets from '../Planets';
 import Hubble from '../Hubble';
-import NEO from '../NEO'
 
 function Wrapper() {
   return (
@@ -13,8 +12,6 @@ function Wrapper() {
       <Mars></Mars>
       <Planets></Planets>
       <Hubble></Hubble>
-      <NEO></NEO>
-
             </div>
             );
 }
