@@ -7,6 +7,7 @@ import NEO from './components/NEO';
 import News from './components/News';
 import Footer from "./components/Footer";
 import './App.css';
+import Wrapper from './components/Wrapper';
 
 
 class App extends Component {
@@ -14,11 +15,12 @@ class App extends Component {
     return (
       <div>
       <Nav></Nav>
-      <Header></Header>
+      <Wrapper></Wrapper>
+      {/* <Header></Header>
       <Body></Body>
       <Login></Login>
       <NEO></NEO>
-      <News></News>
+      <News></News> */}
       <Footer></Footer>
       </div>
     );
