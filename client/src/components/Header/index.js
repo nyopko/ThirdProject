@@ -5,7 +5,6 @@ function Header() {
   return (
     <div class="main">
     <div class="row">
-        <div class="col m1 hide-on-small-only"></div>
         <div class="col s12 m9">
             <div class="row">
                 <div class="col s12">
