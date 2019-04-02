@@ -5,7 +5,7 @@ import Daily from '../Daily';
 
 function SidebarWrapper() {
   return (
-      <div className="sidebarWrapper">
+      <div className="sidebar">
         <NEO></NEO>
         <Daily></Daily>
             </div>

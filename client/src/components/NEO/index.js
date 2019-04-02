@@ -3,17 +3,17 @@ import './style.css';
 
 function NEO() {
   return (
-    <div class="row">
-    <div class="col">
-        <div class="card-panel">
-            <div class="row">
-                <div class="col">
-                    <img src="./NEO-image.jpg" alt="neo" class="responsive-img"/>
+    <div className="row">
+    <div className="col">
+        <div className="card-panel">
+            <div className="row">
+                <div className="col">
+                    <img src="./NEO-image.jpg" alt="neo" className="responsive-img"/>
                 </div>
             </div>
-            <div class="row">
-                <div class="col">
-                    <h5 class="center-align">Near Earth Objects</h5>
+            <div className="row">
+                <div className="col">
+                    <h5 className="center-align">Near Earth Objects</h5>
                 </div>
             </div>
         </div>

@@ -7,7 +7,7 @@ import Hubble from '../Hubble';
 
 function Wrapper() {
   return (
-      <div className="bodyWrapper">
+      <div className="body">
       <Header></Header>
       <Mars></Mars>
       <Planets></Planets>
