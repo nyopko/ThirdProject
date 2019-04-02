@@ -8,6 +8,7 @@ import News from './components/News';
 import Footer from "./components/Footer";
 import './App.css';
 import Wrapper from './components/Wrapper';
+import TotalWrapper from './components/TotalWrapper';
 
 
 class App extends Component {
@@ -15,7 +16,7 @@ class App extends Component {
     return (
       <div>
       <Nav></Nav>
-      <Wrapper></Wrapper>
+      <TotalWrapper></TotalWrapper>
       {/* <Header></Header>
       <Body></Body>
       <Login></Login>

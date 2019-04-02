@@ -1,15 +1,19 @@
 import React from 'react';
 import './style.css';
-import NEO from '../NEO';
-import Daily from '../Daily';
+import Wrapper from '../Wrapper';
+import SidebarWrapper from '../SidebarWrapper';
 
-function SidebarWrapper() {
+function TotalWrapper() {
   return (
-      <div className="sidebarWrapper">
-        <NEO></NEO>
-        <Daily></Daily>
+      <div className="totalWrapper">
+        <div className="bodyWrapper">
+        <Wrapper></Wrapper>
+        </div>
+        <div className="sidebarWrapper">
+        <SidebarWrapper></SidebarWrapper>
+        </div>
             </div>
             );
 }
 
-export default SidebarWrapper;
+export default TotalWrapper;
