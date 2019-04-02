@@ -8,10 +8,10 @@ function Planets() {
         <div className="card-panel">
           <div className="row">
             <div className="col s4 m2">
-              <img src="./rover-image.jpg" alt="rover"className="responsive-img"/>
+              <img src="https://i.ytimg.com/vi/libKVRa01L8/maxresdefault.jpg" alt="rover"className="responsive-img"/>
                                 </div>
               <div className="col s8 m10">
-                <p>Links and Content for the Planets rover goes here
+                <p>Links and Content for the Planets goes here
                                 </p>
                                 </div>
                                 </div>
