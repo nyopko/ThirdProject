@@ -3,7 +3,7 @@ import './style.css';
 
 function RoverContent() {
     return (
-        <div className="PlanetContent">
+        <div className="roverContent">
             <div className="row">
                 <div className="col s12">
                     <div className="card-panel">
