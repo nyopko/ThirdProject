@@ -15,8 +15,15 @@
     "react-scripts": "^2.1.8",
     "sequelize": "^5.2.7"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4"
+  },
   "scripts": {
+    "lint": "eslint",
     "start": "node server.js"
   },
   "repository": {
