@@ -15,8 +15,10 @@
     "react-scripts": "^2.1.8",
     "sequelize": "^5.2.7"
   },
-  "devDependencies": {},
+  "devDependencies": {
+  },
   "scripts": {
+    "lint": "eslint",
     "start": "node server.js"
   },
   "repository": {
