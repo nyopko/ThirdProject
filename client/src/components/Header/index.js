@@ -3,14 +3,13 @@ import './style.css';
 
 function Header() {
   return (
-    <div class="main">
-    <div class="row">
-        <div class="col m1 hide-on-small-only"></div>
-        <div class="col s12 m9">
-            <div class="row">
-                <div class="col s12">
-                    <div class="card-panel">
-                        <h2 class="">Header</h2>
+    <div className="main">
+    <div className="row">
+        <div className="col s12 m9">
+            <div className="row">
+                <div className="col s12">
+                    <div className="card-panel">
+                        <h2 className="">Header</h2>
                     </div>
                 </div>
             </div>
