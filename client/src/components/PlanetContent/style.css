@@ -1,0 +1,10 @@
+.planetPic{
+    height: 500px;
+    width: 100%;
+}
+
+.PlanetContent {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: red;
+}
