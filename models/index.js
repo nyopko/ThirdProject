@@ -5,14 +5,14 @@ var path = require("path");
 var Sequelize = require("sequelize");
 var basename = path.basename(module.filename);
 var env = process.env.NODE_ENV || "development";
-var config = require(__dirname + "/../config/config.js")[env];
+var config = require("../config/config")[env];
 var db = {};
 
 if (config.jawsDB) {
-    sequelize = new Sequelize(process.env[config.jawsDB]);
+    var sequelize = new Sequelize(process.env[config.jawsDB]);
 }
 else {
-    sequelize = new Sequelize(
+    var sequelize = new Sequelize(
         config.database,
         config.user_name,
         config.password,
@@ -20,11 +20,11 @@ else {
     );
 }
 
-if (config.use_env_variable) {
-    var sequelize = new Sequelize(process.env[config.use_env_variable]);
-  } else {
-    var sequelize = new Sequelize(config.database, config.user_name, config.password, config);
-}
+// if (config.use_env_variable) {
+//     var sequelize = new Sequelize(process.env[config.use_env_variable]);
+//   } else {
+//     var sequelize = new Sequelize(config.database, config.user_name, config.password, config);
+// }
 
 fs
   .readdirSync(__dirname)
@@ -36,11 +36,11 @@ fs
         db[model.name] = model;
     });
 
-Object.keys(db).forEach(function(modelName) {
-  if (db[modelName].associate) {
-    db[modelName].associate(db);
-  }
-});
+// Object.keys(db).forEach(function(modelName) {
+//   if (db[modelName].associate) {
+//     db[modelName].associate(db);
+//   }
+// });
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
