@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import TotalWrapper from '../components/TotalWrapper';
 import Header from '../components/Header';
+import PlanetContent from '../components/PlanetContent';
 
 
 
@@ -9,6 +9,7 @@ class App extends Component {
     return (
       <div className="planetsPage">
       <Header />
+      <PlanetContent />
       </div>
     );
   }
