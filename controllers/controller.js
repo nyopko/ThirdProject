@@ -1,7 +1,15 @@
 const db = require("../models");
 
 module.exports = {
-    findAllUrls: function(email){
+    addUser: function(name, email, password){
+        let newUser = {
+            name: name,
+            email: email,
+            password: password
+        }
+        db.User.create(newUser)
+    },
+    findUser: function(email){
         // query all favorite items for a user
         db.User.findAll({
             where: {
@@ -9,6 +17,7 @@ module.exports = {
             }
         })
         .then(data => {
+            console.log(data);
             return data;
         })
     },
@@ -18,6 +27,9 @@ module.exports = {
             where: {
                 UserId: userId
             }
+        }).then(data => {
+            console.log(data);
+            return data;
         })
     },
     addFav: function(userId, favUrl){
@@ -36,10 +48,10 @@ module.exports = {
         db.Favorites.destroy({
             where: {
                 UserId: userId,
-                VideoUrl: favUrl
+                videoUrl: favUrl
             }
         }).then(data => {
-            console.log("Item removed from user: " + data.UserId);
+            console.log(data);
         })
     }
 };
