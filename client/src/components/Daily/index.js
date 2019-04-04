@@ -1,21 +1,7 @@
-import React, { Component } from "react";
+import React from 'react';
 import './style.css';
-import API from "../utils/API";
-require("dotenv").config();
 
-class Daily extends Component {
-
-    componentDidMount() {
-        this.dailyPull();
-      }
-
-    dailyPull () {
-        API.grab()
-          .then(res => this.setState({ result: res.data }))
-          .catch(err => console.log(err));
-      };    
-
-  render(){  
+function Daily() {
   return (
     <div className="row">
     <div className="col">
@@ -35,5 +21,5 @@ class Daily extends Component {
 </div>
     );
 }
-}
+
 export default Daily;
