@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 
-function Daily() {
+function Daily(props) {
   return (
     <div className="row">
     <div className="col">
@@ -13,7 +13,7 @@ function Daily() {
             </div>
             <div className="row">
                 <div className="col">
-                    <h5 className="center-align">Daily Image</h5>
+                    <h5 className="center-align">{props.title}</h5>
                 </div>
             </div>
         </div>
