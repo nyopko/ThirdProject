@@ -1,54 +1,56 @@
 const db = require("../models");
 
 module.exports = {
-    addUser: function(name, email, password){
+    addUser: function(req, res){
         let newUser = {
-            name: name,
-            email: email,
-            password: password
+            name: req.body.name,
+            email: req.body.email,
+            password: req.body.password
         }
         db.User.create(newUser)
     },
-    findUser: function(email){
+    findUser: function(req, res){
         // query all favorite items for a user
         db.User.findAll({
             where: {
-                email: email
+                email: req.body.email
             }
         })
         .then(data => {
             console.log(data);
+            res.json(data);
             return data;
         })
     },
-    findItem: function(userId){
+    findItem: function(req, res){
         // find all videos, images, or audio files
         db.Favorites.findAll({
             where: {
-                UserId: userId
+                UserId: req.body.userId
             }
         }).then(data => {
             console.log(data);
+            res.json(data);
             return data;
         })
     },
-    addFav: function(userId, favUrl){
+    addFav: function(req, res){
         // add a new favorite item to the favorites database
         var newFav = {
-            UserId: userId,
-            videoUrl: favUrl
+            UserId: req.body.userId,
+            videoUrl: req.body.favUrl
         };
 
         db.Favorites.create(newFav).then(data => {
             console.log(data);
         })
     },
-    remove: function(userId, favUrl){
+    remove: function(req, res){
         // remove a favorite item 
         db.Favorites.destroy({
             where: {
-                UserId: userId,
-                videoUrl: favUrl
+                UserId: req.body.userId,
+                videoUrl: req.body.favUrl
             }
         }).then(data => {
             console.log(data);
