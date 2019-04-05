@@ -6,6 +6,13 @@ function Nav() {
         <nav>
             <div className="nav-wrapper">
                 <a href="google.com" className="brand-logo">Space!</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/home">Home</a></li>
+        <li><a href="/hubble">Hubble</a></li>
+        <li><a href="/media">Media</a></li>
+        <li><a href="/planets">Planets</a></li>
+        <li><a href="/rover">Rover</a></li>
+      </ul>
             </div>
         </nav>
     </div>
