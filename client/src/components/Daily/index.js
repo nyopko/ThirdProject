@@ -13,13 +13,13 @@ function Daily(props) {
             </div>
             <div className="row">
                 <div className="col">
+                <h5 className="center-align">{props.title}</h5>
                 <ul class="collapsible">
                     <li>
-                        <div class="collapsible-header">Click to expand</div>
+                        <div class="collapsible-header">Click to learn more!</div>
                             <div class="collapsible-body"><span>{props.explanation}</span></div>
                     </li>
                 </ul>
-                    <h5 className="center-align">{props.title}</h5>
                 </div>
             </div>
         </div>
