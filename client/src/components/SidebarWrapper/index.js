@@ -28,6 +28,8 @@ class SidebarWrapper extends Component {
         <NEO></NEO>
         <Daily 
         title={this.state.result.title}
+        url={this.state.result.url}
+        explantation={this.state.result.explantation}
         />
             </div>
             );

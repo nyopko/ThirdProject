@@ -8,12 +8,13 @@ function Daily(props) {
         <div className="card-panel">
             <div className="row">
                 <div className="col">
-                    <img src="./NEO-image.jpg" alt="neo" className="responsive-img"/>
+                    <img src={props.url} alt="APOD" className="responsive-img" id="dailyPic"/>
                 </div>
             </div>
             <div className="row">
                 <div className="col">
                     <h5 className="center-align">{props.title}</h5>
+                    <p>{props.explanation}</p>
                 </div>
             </div>
         </div>
