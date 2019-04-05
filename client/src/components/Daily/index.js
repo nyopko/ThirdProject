@@ -13,8 +13,13 @@ function Daily(props) {
             </div>
             <div className="row">
                 <div className="col">
+                <ul class="collapsible">
+                    <li>
+                        <div class="collapsible-header">Click to expand</div>
+                            <div class="collapsible-body"><span>{props.explanation}</span></div>
+                    </li>
+                </ul>
                     <h5 className="center-align">{props.title}</h5>
-                    <p>{props.explanation}</p>
                 </div>
             </div>
         </div>

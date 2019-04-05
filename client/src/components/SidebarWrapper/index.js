@@ -14,6 +14,10 @@ class SidebarWrapper extends Component {
 
     componentDidMount() {
         this.dailyPull();
+        document.addEventListener('DOMContentLoaded', function() {
+          var elems = document.querySelectorAll('.collapsible');
+          var instances = M.Collapsible.init(elems, options);
+        });
       }
 
     dailyPull () {
@@ -29,7 +33,7 @@ class SidebarWrapper extends Component {
         <Daily 
         title={this.state.result.title}
         url={this.state.result.url}
-        explantation={this.state.result.explantation}
+        explanation={this.state.result.explanation}
         />
             </div>
             );
