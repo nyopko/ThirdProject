@@ -26,7 +26,7 @@ module.exports = {
         // find all videos, images, or audio files
         db.Favorites.findAll({
             where: {
-                UserId: req.body.userId
+                UserId: req.params.user
             }
         }).then(data => {
             console.log(data);
@@ -43,13 +43,14 @@ module.exports = {
 
         db.Favorites.create(newFav).then(data => {
             console.log(data);
+            res.json(data);
         })
     },
     remove: function(req, res){
         // remove a favorite item 
         db.Favorites.destroy({
             where: {
-                UserId: req.body.userId,
+                userId: req.params.user,
                 videoUrl: req.body.favUrl
             }
         }).then(data => {
