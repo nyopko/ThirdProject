@@ -23,7 +23,7 @@ class SidebarWrapper extends Component {
       }
 
     dailyPull () {
-        API.grab()
+        API.grabAPOD()
           .then(res => this.setState({ result: res.data }))
           .catch(err => console.log(err));
       };    
