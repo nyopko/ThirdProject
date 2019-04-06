@@ -1,0 +1,118 @@
+[
+    {
+        "id": 1,
+        "name": "Mercury",
+        "image": "https://vignette.wikia.nocookie.net/spongebobgalaxy/images/0/07/SpongeBob_SquarePants.png/revision/latest?cb=20171228024014",
+        "moons": "0",
+        "revolution": "88 days",
+        "rotation": "1407.6 hours (58.6 days)",
+        "diameter": "3031.67 mi",
+        "average temperature": "-297°F to 800°F",
+        "cool facts": "Mars is home to the tallest mountain in the solar system. Olympus Mons, a shield volcano, is 21km high and 600km in diameter. Despite having formed over billions of years, evidence from volcanic lava flows is so recent many scientists believe it could still be active."
+      },
+
+      {
+        "id": 2,
+        "name": "Venus",
+        "image": "https://vignette.wikia.nocookie.net/spongebobgalaxy/images/0/07/SpongeBob_SquarePants.png/revision/latest?cb=20171228024014",
+        "moons": "0",
+        "revolution": "225 days",
+        "rotation": "-5832.5 hours (243 days)",
+        "diameter": "7521 mi",
+        "average temperature": "896°F",
+        "cool facts": "Many scientists believe water once existed on the surface. Future Venus explorers will search for evidence of an ancient ocean. More than 40 spacecraft have explored Venus. The ‘90s Magellan mission mapped the planet's surface and Akatsuki is currently orbiting Venus. Venus’ extreme temperatures and acidic clouds make it an unlikely place for life as we know it."
+      },
+
+      {
+        "id": 3,
+        "name": "Earth",
+        "image": "https://vignette.wikia.nocookie.net/spongebobgalaxy/images/0/07/SpongeBob_SquarePants.png/revision/latest?cb=20171228024014",
+        "moons": "1",
+        "revolution": "365.24 days",
+        "rotation": "23.9 hours (.99 days)",
+        "diameter": "7900 mi",
+        "average temperature": "57°F",
+        "cool facts":  "The earth moves around the sun at 67,000 miles per hour. Earth may once have had two moons. A teensy second moon — spanning about 750 miles (1,200 km) wide — may have orbited Earth before it catastrophically slammed into the other one. Bonus fact: At the equator, you would weigh less than if standing at one of the poles."
+      },
+
+
+      {
+        "id": 4,
+        "name": "Mars",
+        "image": "https://vignette.wikia.nocookie.net/spongebobgalaxy/images/0/07/SpongeBob_SquarePants.png/revision/latest?cb=20171228024014",
+        "moons": "2",
+        "revolution": "687 days (1.9 years)",
+        "rotation": "24.6 hours (1.3 days)",
+        "diameter": "4212.274 mi",
+        "average temperature": "-81°F",
+        "cool facts": "Mars is one of the most explored bodies in our solar system, and it's the only planet where we've sent rovers to roam the alien landscape. These robotic explorers have found lots of evidence that Mars was much wetter and warmer, with a thicker atmosphere, billions of years ago. Mars is known as the Red Planet because iron minerals in the Martian soil oxidize, or rust, causing the soil and atmosphere to look red."
+        
+      },
+
+
+      {
+        "id": 5,
+        "name": "Jupitor",
+        "image": "https://vignette.wikia.nocookie.net/spongebobgalaxy/images/0/07/SpongeBob_SquarePants.png/revision/latest?cb=20171228024014",
+        "moons": "79",
+        "revolution": "4,332.59 days (11.9 years)",
+        "rotation": "9.9 hours",
+        "diameter": "83,082.3 mi",
+        "average temperature": "-234°F",
+        "cool facts": "Jupiter's Great Red Spot is a gigantic storm that’s about twice the size of Earth and has raged for over a century Jupiter cannot support life as we know it. But some of Jupiter's moons have oceans beneath their crusts that might support life. Nine spacecraft have visited Jupiter. Seven flew by and two have orbited the gas giant. Juno, the most recent, arrived at Jupiter in 2016."
+        
+      },
+
+      {
+        "id": 6,
+        "name": "Saturn",
+        "image": "https://vignette.wikia.nocookie.net/spongebobgalaxy/images/0/07/SpongeBob_SquarePants.png/revision/latest?cb=20171228024014",
+        "moons": "62",
+        "revolution": "10,759 days (29.5 years)",
+        "rotation": "10.7 hours",
+        "diameter": "67560.447 mi",
+        "average temperature": "-288°F",
+        "cool facts": "Saturn is a gas-giant planet and therefore does not have a solid surface like Earth’s. But it might have a solid core somewhere in there. Few missions have visited Saturn: Pioneer 11 and Voyagers 1 and 2 flew by; But Cassini orbited Saturn 294 times from 2004 to 2017."
+        
+      },
+
+      {
+        "id": 7,
+        "name": "Uranus",
+        "image": "https://vignette.wikia.nocookie.net/spongebobgalaxy/images/0/07/SpongeBob_SquarePants.png/revision/latest?cb=20171228024014",
+        "moons": "27",
+        "revolution": "30,688.5 days (84 years)",
+        "rotation": "-17.2 hours",
+        "diameter": "31,035 mi",
+        "average temperature": "-357°F",
+        "cool facts": "Uranus is an ice giant. Most of its mass is a hot, dense fluid of icy materials – water, methane and ammonia – above a small rocky core. Voyager 2 is the only spacecraft to fly by Uranus. No spacecraft has orbited this distant planet to study it at length and up close. Like Venus, Uranus rotates east to west. But Uranus is unique in that it rotates on its side Uranus' unique sideways rotation makes for weird seasons. The planet's north pole experiences 21 years of nighttime in winter, 21 years of daytime in summer and 42 years of day and night in the spring and fall."
+        
+      },
+
+      {
+        "id": 8,
+        "name": "Neptune",
+        "image": "https://vignette.wikia.nocookie.net/spongebobgalaxy/images/0/07/SpongeBob_SquarePants.png/revision/latest?cb=20171228024014",
+        "moons": "14",
+        "revolution": "60,182 days (168.4 years)",
+        "rotation": "-16.11 hours",
+        "diameter": "30,598.8 mi",
+        "average temperature": "-373°F",
+        "cool facts": "It is the windiest planet. Winds whip clouds of frozen methane across the planet at speeds of more than 2,000 km/h -1,200 mph—close to the top speed of a U.S. Navy F/A-18 Hornet fighter jet. Earth's most powerful winds hit only about 400 km/h (250 mph). NASA's Voyager 2 is the only spacecraft to have visited Neptune up close. It flew past in 1989 on its way out of the solar system. Because of dwarf planet Pluto’s elliptical orbit, Pluto is sometimes closer to the Sun (and us) than Neptune is."
+        
+      },
+
+
+      {
+        "id": 9,
+        "name": "Pluto the dwarf planet",
+        "image": "https://vignette.wikia.nocookie.net/spongebobgalaxy/images/0/07/SpongeBob_SquarePants.png/revision/latest?cb=20171228024014",
+        "moons": "5",
+        "revolution": "90,560 days (248 years)",
+        "rotation": "-153.3 hours",
+        "diameter": "1,476.8 mi",
+        "average temperature": "-378°F",
+        "cool facts": "Because of dwarf planet Pluto’s elliptical orbit, Pluto is sometimes closer to the Sun (and us) than Neptune is."
+      }  
+
+]

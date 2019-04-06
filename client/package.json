@@ -7,6 +7,7 @@
     "dotenv": "^7.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-image-mapper": "0.0.14",
     "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8",
     "sequelize": "^5.2.8"

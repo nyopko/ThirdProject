@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 
+
 /// Stylesheet import 
 
 import './App.css';
@@ -14,6 +15,7 @@ import Planets from "./pages/Planets.js";
 import Rover from "./pages/Rover.js";
 import Hubble from "./pages/Hubble.js";
 import Media from "./pages/Media";
+import Resources from "./pages/Resources";
 
 
 class App extends Component {
@@ -28,6 +30,7 @@ class App extends Component {
             <Route exact path="/hubble" component={Hubble} />
             <Route exact path="/rover" component={Rover} />
             <Route exact path="/media" component={Media} />
+            <Route exact path="/resources" component={Resources} />
           </Switch>
           <Footer />
         </div>
