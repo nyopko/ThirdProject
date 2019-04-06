@@ -1,46 +1,15 @@
-import React, { Component } from "react";
+import React from 'react';
 import './style.css';
 import NEO from '../NEO';
-import Daily from '../Daily';
-import './style.css';
-import API from "../../utils/API";
-import M from 'materialize-css';
-require("dotenv").config();
+import DailyWrapper from '../DailyWrapper';
 
-class SidebarWrapper extends Component {
-
-  state = {
-    result: {}
-  };
-
-    componentDidMount() {
-        this.dailyPull();
-        document.addEventListener('DOMContentLoaded', function() {
-          var elems = document.querySelectorAll('.collapsible');
-          var options = {}
-          var instances = M.Collapsible.init(elems, options);
-        });
-      }
-
-    dailyPull () {
-        API.grabAPOD()
-          .then(res => this.setState({ result: res.data }))
-          .catch(err => console.log(err));
-      };    
-
-  render(){
+function SidebarWrapper() {
   return (
-      <div className="sidebar">
-        <NEO></NEO>
-        <Daily 
-        title={this.state.result.title}
-        url={this.state.result.url}
-        explanation={this.state.result.explanation}
-        />
-            </div>
+      <div className="sidebarWrapper">
+      <NEO />
+      <DailyWrapper />
+      </div>
             );
-
-  }
 }
 
 export default SidebarWrapper;
