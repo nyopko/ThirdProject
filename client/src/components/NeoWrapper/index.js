@@ -22,7 +22,7 @@ class NEOWrapper extends Component {
       }
 
     dailyPull () {
-        API.grabAPOD()
+        API.grabAsteroids()
           .then(res => this.setState({ result: res.data }))
           .catch(err => console.log(err));
       };    
@@ -30,11 +30,6 @@ class NEOWrapper extends Component {
   render(){
   return (
       <div className="dailyWrapper">
-        <NEO 
-        title={this.state.result.title}
-        url={this.state.result.url}
-        explanation={this.state.result.explanation}
-        />
             </div>
             );
 
