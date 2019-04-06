@@ -16,14 +16,20 @@ const neoURL = "https://api.nasa.gov/neo/rest/v1/feed?start_date=" + dateFormatt
 
 export default {
   grabAPOD: function() {
-    console.log(dateFormatted);
-    console.log(APIKEY);
-    console.log(apodURL);
-    return axios.get(apodURL);
+    console.log(neoURL);
+    axios.get(neoURL);
+      return neoURL;
+    // console.log(neoURL);
+    // console.log(APIKEY);
+    // console.log(apodURL);
+    // return axios.get(apodURL);
   },
 
   grabAsteroids: function(){
-    console.log(neoURL);
-    return axios.get(neoURL);
+    // console.log(neoURL);
+    // axios.get(neoURL).then(data => {
+    //   let newObj = neoURL.keys(dateFormatted);
+    //   console.log(newObj);
+    // })
   }
 };
