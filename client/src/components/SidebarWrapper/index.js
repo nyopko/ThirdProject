@@ -4,6 +4,7 @@ import NEO from '../NEO';
 import Daily from '../Daily';
 import './style.css';
 import API from "../../utils/API";
+import M from 'materialize-css';
 require("dotenv").config();
 
 class SidebarWrapper extends Component {
@@ -14,6 +15,11 @@ class SidebarWrapper extends Component {
 
     componentDidMount() {
         this.dailyPull();
+        document.addEventListener('DOMContentLoaded', function() {
+          var elems = document.querySelectorAll('.collapsible');
+          var options = {}
+          var instances = M.Collapsible.init(elems, options);
+        });
       }
 
     dailyPull () {
@@ -28,6 +34,8 @@ class SidebarWrapper extends Component {
         <NEO></NEO>
         <Daily 
         title={this.state.result.title}
+        url={this.state.result.url}
+        explanation={this.state.result.explanation}
         />
             </div>
             );
