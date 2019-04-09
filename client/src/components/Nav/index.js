@@ -12,6 +12,7 @@ function Nav() {
         <li><a href="/media">Media</a></li>
         <li><a href="/planets">Planets</a></li>
         <li><a href="/rover">Rover</a></li>
+        <li><a href="/resources">Resources</a></li>
       </ul>
             </div>
         </nav>
