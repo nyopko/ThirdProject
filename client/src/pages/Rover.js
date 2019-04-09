@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Header from '../components/Header';
-import RoverContent from '../components/RoverContent';
+import RoverContent from '../components/CuriosityContent';
+import RoverWrapper from '../components/RoverWrapper';
+import SpiritWrapper from "../components/SpiritWrapper"
 
 
 
@@ -9,7 +11,8 @@ class App extends Component {
     return (
       <div className="roverPage">
       <Header />
-      <RoverContent />
+      <RoverWrapper />
+      {/* <SpiritWrapper /> */}
       </div>
     );
   }
