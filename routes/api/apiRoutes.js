@@ -15,4 +15,5 @@ router.route("/:user/favorites")
 
 router.route("/:user/delete")
     .delete(favsController.remove);
+    
 module.exports = router;
