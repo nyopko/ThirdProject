@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 
-function RoverContent(props) {
+function CuriosityContent(props) {
     return (
         <div className="roverContent">
             <div className="row">
@@ -9,7 +9,8 @@ function RoverContent(props) {
                     <div className="card-panel">
                         <div className="row">
                             <div className="col s4 m2">
-                            <img src={props.url} alt="rover1" className="responsive-img" id="roverPic"/>
+                            <p>Curiosity Pic</p>
+                            <img src={props.urlCuriosity} alt="curiosityPic" className="responsive-img" id="curiosityPic"/>
                         </div>
                     </div>
                 </div>
@@ -19,4 +20,4 @@ function RoverContent(props) {
     );
 }
 
-export default RoverContent;
+export default CuriosityContent;

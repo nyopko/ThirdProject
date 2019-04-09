@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from '../components/Header';
-import RoverContent from '../components/RoverContent';
-import RoverWrapper from '../components/RoverWrapper';
+import RoverContent from '../components/CuriosityContent';
+import RoverWrapper from '../components/CuriosityWrapper';
 
 
 
