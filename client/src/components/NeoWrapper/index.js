@@ -36,9 +36,9 @@ class NEOWrapper extends Component {
   render(){
   return (
       <div className="dailyWrapper">
-        {/* <NEO 
+        <NEO 
         name={this.state.result.near_earth_objects}
-         */}
+        
         />
             </div>
             );
