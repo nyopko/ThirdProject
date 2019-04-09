@@ -4,6 +4,7 @@ import CuriosityContent from '../CuriosityContent';
 import SpiritContent from "../SpiritContent"
 import CuriosityWrapper from '../CuriosityWrapper';
 import SpiritWrapper from '../SpiritWrapper';
+import OpportunityWrapper from '../OpportunityWrapper';
 
 
 function RoverWrapper() {
@@ -11,6 +12,7 @@ function RoverWrapper() {
       <div className="roverWrapper">
            <CuriosityWrapper />
            <SpiritWrapper />
+           <OpportunityWrapper />
             </div>
             );
 }
