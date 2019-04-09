@@ -30,11 +30,12 @@ class CuriosityWrapper extends Component {
     /// Curiosity API Call 
 
     const APIKEY = process.env.REACT_APP_API_KEY;
-    let randomValue = Math.floor(Math.random() * 1000)
+    let randomValue = Math.floor(Math.random() * 100)
     const marsURL = "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=" + randomValue + "&page=1&api_key=" + APIKEY
 
     axios.get(marsURL)
       .then((res) => {
+        console.log(marsURL);
         if (res.data.Error) { // if error
           this.setState({
             error: res.errors
