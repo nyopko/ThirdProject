@@ -10,7 +10,6 @@ function Wrapper() {
       <div className="body">
       <Header></Header>
       <Mars></Mars>
-      <Planets></Planets>
       <Hubble></Hubble>
             </div>
             );
