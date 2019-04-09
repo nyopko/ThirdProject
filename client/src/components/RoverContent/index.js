@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 
-function RoverContent() {
+function RoverContent(props) {
     return (
         <div className="roverContent">
             <div className="row">
@@ -9,7 +9,7 @@ function RoverContent() {
                     <div className="card-panel">
                         <div className="row">
                             <div className="col s4 m2">
-                            <p>Content Here</p>
+                            <img src={props.url} alt="rover1" className="responsive-img" id="roverPic"/>
                         </div>
                     </div>
                 </div>

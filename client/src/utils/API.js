@@ -2,8 +2,9 @@ import axios from "axios";
 require('dotenv').config();
 
 /// APOD 
-const apodURL = "https://api.nasa.gov/planetary/apod?api_key=";
 const APIKEY = process.env.REACT_APP_API_KEY;
+const apodURL = "https://api.nasa.gov/planetary/apod?api_key=" + APIKEY;
+
 
 /// MARS
 let randomValue = Math.floor(Math.random() * 2000)
@@ -15,6 +16,9 @@ export default {
     console.log(marsURL);
     console.log(APIKEY);
     console.log(apodURL);
-   return axios.get(marsURL)
+   return axios.get(apodURL)
+  },
+  grabMars: function() {
+   return axios.get(marsURL);
   }
 };

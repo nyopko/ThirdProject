@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from '../components/Header';
 import RoverContent from '../components/RoverContent';
+import RoverWrapper from '../components/RoverWrapper';
 
 
 
@@ -9,7 +10,7 @@ class App extends Component {
     return (
       <div className="roverPage">
       <Header />
-      <RoverContent />
+      <RoverWrapper />
       </div>
     );
   }
