@@ -9,6 +9,7 @@ function RoverContent() {
                     <div className="card-panel">
                         <div className="row">
                             <div className="col s4 m2">
+                            <p>Content Here</p>
                         </div>
                     </div>
                 </div>

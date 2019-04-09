@@ -16,8 +16,5 @@ export default {
     console.log(APIKEY);
     console.log(apodURL);
    return axios.get(marsURL)
-  //  .then(data => {
-  //    console.log(data.data.photos[0].img_src)
-  //   })
   }
 };
