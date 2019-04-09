@@ -10,7 +10,7 @@ import RoverContent from "../CuriosityContent";
 import CuriosityContent from "../CuriosityContent"
 require("dotenv").config();
 
-class RoverWrapper extends Component {
+class CuriosityWrapper extends Component {
 
   constructor(props) {
     super(props);
@@ -74,4 +74,4 @@ class RoverWrapper extends Component {
   }
 }
 
-export default RoverWrapper;
+export default CuriosityWrapper;

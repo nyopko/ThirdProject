@@ -3,7 +3,7 @@ import './style.css';
 
 function CuriosityContent(props) {
     return (
-        <div className="roverContent">
+        <div className="curiosityContent">
             <div className="row">
                 <div className="col s12">
                     <div className="card-panel">
