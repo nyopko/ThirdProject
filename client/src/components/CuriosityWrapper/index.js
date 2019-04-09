@@ -16,10 +16,7 @@ class CuriosityWrapper extends Component {
     super(props);
 
     this.state = {
-      firstResponsePhoto: null,
-      error: "",
-      loading: "",
-      initialRequestMade: false
+      firstPhoto: null,
     };
   }
 
@@ -30,31 +27,29 @@ class CuriosityWrapper extends Component {
     /// Curiosity API Call 
 
     const APIKEY = process.env.REACT_APP_API_KEY;
-    let randomValue = Math.floor(Math.random() * 100)
+    let randomValue = Math.floor(Math.random() * 1000)
     const marsURL = "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=" + randomValue + "&page=1&api_key=" + APIKEY
 
     axios.get(marsURL)
       .then((res) => {
         console.log(marsURL);
-        if (res.data.Error) { // if error
+        if (res.data.Error) { // error message
           this.setState({
             error: res.errors
           });
-        } else { // if success
-          let photoVal = "";
+        } else { // success
+          let photoValue = "";
 
-          // check if any photos come back
+          // check for photos
           if (!!res.data.photos[0]) {
-            photoVal = res.data.photos[0].img_src;
+            photoValue = res.data.photos[0].img_src;
           } else {
-            photoVal = null;
+            photoValue = null;
           }
 
           // regardless of if photos come back:
           this.setState({
-            firstResponsePhoto: photoVal,
-            loading: "",
-            initialRequestMade: true
+            firstPhoto: photoValue
           });
         }
       });
@@ -66,7 +61,7 @@ class CuriosityWrapper extends Component {
       <div className="class">
         <CuriosityContent
           // title={this.state.result.title}
-          urlCuriosity={this.state.firstResponsePhoto}
+          urlCuriosity={this.state.firstPhoto}
         // explanation={this.state.result.explanation}
         />
       </div>

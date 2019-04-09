@@ -1,10 +1,6 @@
 import React, { Component } from "react";
 import './style.css';
-import NEO from '../NEO';
-import Daily from '../Daily';
 import './style.css';
-import API from "../../utils/API";
-import M from 'materialize-css';
 import axios from "axios"
 import SpiritContent from "../SpiritContent"
 require("dotenv").config();
@@ -15,10 +11,7 @@ class SpiritWrapper extends Component {
     super(props);
 
     this.state = {
-      firstResponsePhoto: null,
-      error: "",
-      loading: "",
-      initialRequestMade: false
+      firstPhoto: null,
     };
   }
 
@@ -26,7 +19,7 @@ class SpiritWrapper extends Component {
 
   componentDidMount() {
 
-    /// Curiosity API Call 
+    /// Spirit API Call 
 
     const APIKEY = process.env.REACT_APP_API_KEY;
     let randomValue = Math.floor(Math.random() * 1000)
@@ -34,25 +27,22 @@ class SpiritWrapper extends Component {
 
     axios.get(marsURL)
       .then((res) => {
-        if (res.data.Error) { // if error
+        if (res.data.Error) { // error message
           this.setState({
             error: res.errors
           });
-        } else { // if success
-          let photoVal = "";
+        } else { 
+          let photoValue = "";
 
-          // check if any photos come back
+          // look for photos
           if (!!res.data.photos[0]) {
-            photoVal = res.data.photos[0].img_src;
+            photoValue = res.data.photos[0].img_src;
           } else {
-            photoVal = null;
+            photoValue = null;
           }
 
-          // regardless of if photos come back:
           this.setState({
-            firstResponsePhoto: photoVal,
-            loading: "",
-            initialRequestMade: true
+            firstPhoto: photoValue
           });
         }
       });
@@ -63,9 +53,7 @@ class SpiritWrapper extends Component {
     return (
       <div className="class">
         <SpiritContent
-          // title={this.state.result.title}
-          urlSpirit={this.state.firstResponsePhoto}
-        // explanation={this.state.result.explanation}
+          urlSpirit={this.state.firstPhoto}
         />
       </div>
     );
