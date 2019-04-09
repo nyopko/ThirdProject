@@ -7,10 +7,27 @@ module.exports = {
             email: req.body.email,
             password: req.body.password
         }
-        db.User.create(newUser)
+
+        db.User.findAll({       //check to see if the user already exists
+            where: {
+                email: newUser.email
+            }
+        }).then(data => {
+            if(!data[0]){
+                db.User.create(newUser)     //if the user does not exist, add it to the database
+                    .then(data => {
+                        console.log(data);
+                        res.json(data);
+                    })
+            }
+            else{
+                console.log("User Already Exists")      //otherwise, send a "user exists" response
+                res.json({status: 'User Already Exists'})
+            }
+        })
+        
     },
     findUser: function(req, res){
-        // query all favorite items for a user
         db.User.findAll({
             where: {
                 email: req.body.email
@@ -23,7 +40,6 @@ module.exports = {
         })
     },
     findItem: function(req, res){
-        // find all videos, images, or audio files
         db.Favorites.findAll({
             where: {
                 UserId: req.params.user
@@ -34,12 +50,65 @@ module.exports = {
             return data;
         })
     },
-    addFav: function(req, res){
-        // add a new favorite item to the favorites database
-        var newFav = {
+    findVideos: function(req, res){
+        db.Favorites.findAll({
+            attributes: [videoUrl],
+            where: {
+                UserId: req.params.user
+            }
+        }).then(data => {
+            console.log(data);
+            res.json(data);
+            return data;
+        })
+    },
+    findAudio: function(req, res){
+        db.Favorites.findAll({
+            attributes: [audioUrl],
+            where: {
+                UserId: req.params.user
+            }
+        }).then(data => {
+            console.log(data);
+            res.json(data);
+            return data;
+        })
+    },
+    findImages: function(req, res){
+        db.Favorites.findAll({
+            attributes: [imageUrl],
+            where: {
+                UserId: req.params.user
+            }
+        })
+    },
+    addFavVideo: function(req, res){
+        let newFav = {
             UserId: req.body.userId,
             videoUrl: req.body.favUrl
         };
+
+        db.Favorites.create(newFav).then(data => {
+            console.log(data);
+            res.json(data);
+        })
+    },
+    addFavAudio: function(req, res){
+        let newFav = {
+            UserId: req.body.userId,
+            videoUrl: req.body.favUrl
+        }
+
+        db.Favorites.create(newFav).then(data => {
+            console.log(data);
+            res.json(data);
+        })
+    },
+    addFavImage: function(req, res){
+        let newFav = {
+            UserId: req.body.userId,
+            imageUrl: req.body.favUrl
+        }
 
         db.Favorites.create(newFav).then(data => {
             console.log(data);
