@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../components/Header';
-import MediaContent from '../components/MediaContent';
+import MediaWrapper from '../components/MediaWrapper';
 
 
 
@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <div className="mediaPage">
       <Header />
-      <MediaContent />
+      <MediaWrapper />
       </div>
     );
   }
