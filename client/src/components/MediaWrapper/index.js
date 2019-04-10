@@ -19,15 +19,21 @@ class MediaWrapper extends Component {
         }
   
       imgPull () {
+        console.log(API);
           API.imgGet()
-            // .then(res => this.setState({ result: res.data }))
-            // .catch(err => console.log(err));
+            .then(res => this.setState({ result: res.data }))
+            .catch(err => console.log(err));
+            
         };    
   
     render(){
         return (
             <div className="mediaWrapper">
-                 <MediaContent />
+                 <MediaContent
+                //  title={this.state.result.title}
+                 url={this.state.toString()}
+                //  explanation={this.state.result.explanation}
+                 />
                   </div>
                   );
   

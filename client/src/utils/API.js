@@ -18,6 +18,7 @@ export default {
 
   imgGet: function() {
     console.log(imgURL);
+    return axios.get(imgURL);
   }
 
 
