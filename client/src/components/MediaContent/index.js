@@ -9,6 +9,7 @@ function MediaContent() {
                     <div className="card-panel">
                         <div className="row">
                             <div className="col s4 m2">
+                            <p></p>
                         </div>
                     </div>
                 </div>

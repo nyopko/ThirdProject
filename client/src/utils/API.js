@@ -17,8 +17,8 @@ const neoURL = "https://api.nasa.gov/neo/rest/v1/feed?start_date=" + dateFormatt
 export default {
   grabAPOD: function() {
     console.log(neoURL);
-    axios.get(neoURL);
-      return neoURL;
+    return axios.get(neoURL);
+  
     // console.log(neoURL);
     // console.log(APIKEY);
     // console.log(apodURL);

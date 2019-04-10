@@ -4,15 +4,14 @@ import NEO from '../NEO';
 import './style.css';
 import API from "../../utils/API";
 import M from 'materialize-css';
-import moment from "moment";
+import moment from "moment"
 require("dotenv").config();
 
-let dateFormatted = moment();
+
+var dateFormatted = moment();
 dateFormatted = moment(dateFormatted).format("YYYY-MM-DD");
 
 class NEOWrapper extends Component {
-
-    
 
   state = {
     result: {}
@@ -28,17 +27,21 @@ class NEOWrapper extends Component {
       }
 
     dailyPull () {
-        API.grabAsteroids()
-          .then(res => this.setState({ result: res.data }))
+      console.log(API);
+        API.grabAPOD()
+          .then(res => {
+          console.log(dateFormatted);
+          return (this.setState({ result: res.data.near_earth_objects[dateFormatted][0] }))})
           .catch(err => console.log(err));
       };    
 
   render(){
   return (
-      <div className="dailyWrapper">
-        <NEO 
-        name={this.state.result.near_earth_objects}
-        
+      <div className="neoWrapper">
+        <NEO
+        // title={this.state.result.title}
+        name={this.state.result.name}
+        // explanation={this.state.result.explanation}
         />
             </div>
             );

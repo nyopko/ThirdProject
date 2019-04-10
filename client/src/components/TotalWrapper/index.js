@@ -2,6 +2,7 @@ import React from 'react';
 import './style.css';
 import Wrapper from '../Wrapper';
 import SidebarWrapper from '../SidebarWrapper';
+import NEOWrapper from '../NeoWrapper';
 
 function TotalWrapper() {
   return (
@@ -12,6 +13,7 @@ function TotalWrapper() {
         <div className="sidebarWrapper">
         <SidebarWrapper></SidebarWrapper>
         </div>
+        <NEOWrapper />
             </div>
             );
 }

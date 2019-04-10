@@ -27,19 +27,22 @@ class DailyWrapper extends Component {
       }
 
     dailyPull () {
+      console.log(API);
         API.grabAPOD()
-          .then(res => this.setState({ result: res.data.data.near_earth_objects[dateFormatted][0] }))
+          .then(res => {
+          console.log(dateFormatted);
+          return (this.setState({ result: res.data.near_earth_objects[dateFormatted][0] }))})
           .catch(err => console.log(err));
       };    
 
   render(){
   return (
       <div className="dailyWrapper">
-        <Daily 
+        {/* <Daily 
         // title={this.state.result.title}
         // url={this.state.result.url}
         // explanation={this.state.result.explanation}
-        />
+        /> */}
             </div>
             );
 
