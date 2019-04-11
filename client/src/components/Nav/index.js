@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
 
+
 function Nav() {
     return <div className="nav">
         <nav>
@@ -13,10 +14,14 @@ function Nav() {
         <li><a href="/planets">Planets</a></li>
         <li><a href="/rover">Rover</a></li>
         <li><a href="/resources">Resources</a></li>
+        <li><a href="#login" class="btn btn-small teal modal-trigger">Login</a></li>
       </ul>
+      
             </div>
         </nav>
     </div>
 }
+
+
 
 export default Nav;
