@@ -6,7 +6,7 @@ import API from "../../utils/API";
 class MediaWrapper extends Component {
 
     state = {
-      result: {}
+      results: []
     };
   
       componentDidMount() {
@@ -21,19 +21,23 @@ class MediaWrapper extends Component {
       imgPull () {
         console.log(API);
           API.imgGet()
-            .then(res => this.setState({ result: res.data }))
-            .catch(err => console.log(err));
-            
+            .then(res => {
+              console.log(res.data.collection.href)
+             this.setState({ results: res.data.collection.items.slice(0,25) })})
+            .catch(err => console.log(err));           
         };    
   
     render(){
         return (
             <div className="mediaWrapper">
-                 <MediaContent
-                //  title={this.state.result.title}
-                 url={this.state.toString()}
-                //  explanation={this.state.result.explanation}
+            {
+              this.state.results.map(result => {
+                return <MediaContent
+                title={result.data[0].title}
+                imgURL={result.links[0].href}
                  />
+              })
+            }
                   </div>
                   );
   

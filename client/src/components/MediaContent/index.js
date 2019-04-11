@@ -9,7 +9,9 @@ function MediaContent(props) {
                     <div className="card-panel">
                         <div className="row">
                             <div className="col s4 m2">
-                            <p>{props.url}</p>
+                            <p>{props.title}</p>
+                            <p> {props.imgURL}</p>
+                    
                         </div>
                     </div>
                 </div>
