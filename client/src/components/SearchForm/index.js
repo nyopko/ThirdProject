@@ -14,16 +14,17 @@ function SearchForm(props) {
                                     <div class="input-group">
                                         <div class="input-field">
                                             <input
+                                            onChange={props.handleInputChange}
                                             value={props.value}
                                             search="search"
+                                            name="search"
                                             />
                                             <label class="label-icon" for="search">
-                                                <i class="material-icons" >search</i>
+                                                <i class="material-icons">search</i>
                                             </label>
                                         </div>
                                         <button onClick={props.handleFormSubmit} class="input-group-addon btn">search</button>
                                     </div>
-
                                 </form>
                             </div>
                         </div>

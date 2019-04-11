@@ -1,21 +1,22 @@
 import React, { Component } from "react";
 import './style.css';
 import MediaContent from '../MediaContent';
+import SearchForm from '../SearchForm';
 import API from "../../utils/API";
 
 class MediaWrapper extends Component {
 
     state = {
       results: [],
-      search: "mars"
+      search: ""
     };
   
       componentDidMount() {
-        this.imgPull(this.state.search);
+        // this.imgPull(this.state.search);
         }
   
       imgPull = query => {
-        console.log(API);
+        console.log(query);
           API.imgGet(query)
             .then(res => {
               console.log(res.data.collection.href)
@@ -26,6 +27,8 @@ class MediaWrapper extends Component {
         handleInputChange = event => {
           const value = event.target.value;
           const name = event.target.name;
+          console.log(name);
+          console.log(value);
           this.setState({
             [name]: value
           });
@@ -40,12 +43,18 @@ class MediaWrapper extends Component {
     render(){
         return (
             <div className="mediaWrapper">
+            <SearchForm
+      // value={this.state.search}
+      handleInputChange={this.handleInputChange}
+      handleFormSubmit={this.handleFormSubmit}
+      />
             {
               this.state.results.map(result => {
                 return <MediaContent
                 title={result.data[0].title}
                 imgURL={result.links[0].href}
                  />
+                 
               })
             }
                   </div>
