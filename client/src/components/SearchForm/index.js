@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 
-function SearchForm() {
+function SearchForm(props) {
     return (
         <div className="main">
             <div className="row">
@@ -10,15 +10,18 @@ function SearchForm() {
                         <div className="col s12">
                         <div className="card-panel">
                             <div class="container">
-                                <form id="search-site" action='search' method='get'>
+                                <form>
                                     <div class="input-group">
                                         <div class="input-field">
-                                            <input id="search" type="search" name='q' />
+                                            <input
+                                            value={props.value}
+                                            search="search"
+                                            />
                                             <label class="label-icon" for="search">
                                                 <i class="material-icons" >search</i>
                                             </label>
                                         </div>
-                                        <button type="submit" class="input-group-addon btn">search</button>
+                                        <button onClick={props.handleFormSubmit} class="input-group-addon btn">search</button>
                                     </div>
 
                                 </form>

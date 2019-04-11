@@ -6,21 +6,36 @@ import API from "../../utils/API";
 class MediaWrapper extends Component {
 
     state = {
-      results: []
+      results: [],
+      search: "mars"
     };
   
       componentDidMount() {
-          this.imgPull();
+        this.imgPull(this.state.search);
         }
   
-      imgPull () {
+      imgPull = query => {
         console.log(API);
-          API.imgGet()
+          API.imgGet(query)
             .then(res => {
               console.log(res.data.collection.href)
              this.setState({ results: res.data.collection.items.slice(0,25) })})
             .catch(err => console.log(err));           
-        };    
+        };
+        
+        handleInputChange = event => {
+          const value = event.target.value;
+          const name = event.target.name;
+          this.setState({
+            [name]: value
+          });
+        };
+
+        handleFormSubmit = event => {
+          event.preventDefault();
+          this.imgPull(this.state.search);
+          
+        };
   
     render(){
         return (
