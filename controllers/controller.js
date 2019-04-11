@@ -7,10 +7,27 @@ module.exports = {
             email: req.body.email,
             password: req.body.password
         }
-        db.User.create(newUser)
+
+        db.User.findAll({       //check to see if the user already exists
+            where: {
+                email: newUser.email
+            }
+        }).then(data => {
+            if(!data[0]){
+                db.User.create(newUser)     //if the user does not exist, add it to the database
+                    .then(data => {
+                        console.log(data);
+                        res.json(data);
+                    })
+            }
+            else{
+                console.log("User Already Exists")      //otherwise, send a "user exists" response
+                res.json({status: 'User Already Exists'})
+            }
+        })
+        
     },
     findUser: function(req, res){
-        // query all favorite items for a user
         db.User.findAll({
             where: {
                 email: req.body.email
@@ -22,9 +39,9 @@ module.exports = {
             return data;
         })
     },
-    findItem: function(req, res){
-        // find all videos, images, or audio files
+    findUrls: function(req, res){
         db.Favorites.findAll({
+            attributes: ['url'],
             where: {
                 UserId: req.params.user
             }
@@ -34,24 +51,36 @@ module.exports = {
             return data;
         })
     },
-    addFav: function(req, res){
-        // add a new favorite item to the favorites database
-        var newFav = {
+    addFavUrl: function(req, res){
+        let newFav = {
             UserId: req.body.userId,
-            videoUrl: req.body.favUrl
+            url: req.body.favUrl,
+            media_type: req.body.media_type
         };
 
-        db.Favorites.create(newFav).then(data => {
-            console.log(data);
-            res.json(data);
+        db.Favorites.findAll({
+            attributes: ['url'],
+            where: {
+                UserId: newFav.UserId,
+                url: newFav.url
+            }
+        }).then(data => {
+            if(!data[0]){
+                db.Favorites.create(newFav).then(data => {
+                    console.log(data);
+                    res.json(data);
+                })
+            }
+            else {
+                res.json({status: "Video URL already exists"})
+            }
         })
     },
     remove: function(req, res){
-        // remove a favorite item 
         db.Favorites.destroy({
             where: {
                 userId: req.params.user,
-                videoUrl: req.body.favUrl
+                [videoUrl]: req.body.favUrl
             }
         }).then(data => {
             console.log(data);

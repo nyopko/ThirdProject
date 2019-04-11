@@ -4,14 +4,14 @@ const favsController = require("../../controllers/controller.js");
 router.route("/new_user")
     .post(favsController.addUser);
 
-router.route("/new_fav")
-    .post(favsController.addFav);
+router.route("/add_url")
+    .post(favsController.addFavUrl);
 
 router.route("/get_user")
     .get(favsController.findUser);
 
 router.route("/:user/favorites")
-    .get(favsController.findItem);
+    .get(favsController.findUrls);
 
 router.route("/:user/delete")
     .delete(favsController.remove);
