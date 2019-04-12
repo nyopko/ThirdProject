@@ -6,11 +6,16 @@ require('dotenv').config();
 const APIKEY = process.env.REACT_APP_API_KEY;
 const apodURL = "https://api.nasa.gov/planetary/apod?api_key=" + APIKEY;
 
+
+/// Image search API 
+const imgURL = "https://images-api.nasa.gov/search?q="
+
 /// Asteroids / NEO
 let dateFormatted = moment();
 dateFormatted = moment(dateFormatted).format("YYYY-MM-DD");
 
 const neoURL = "https://api.nasa.gov/neo/rest/v1/feed?start_date=" + dateFormatted + "&end_date="+ dateFormatted + "&api_key=" + APIKEY;
+
 
 
 export default {
@@ -19,6 +24,12 @@ export default {
     console.log(apodURL);
    return axios.get(apodURL)
   },
+
+  imgGet: function(query) {
+    console.log(imgURL);
+    return axios.get(imgURL + query);
+  },
+
 
   grabAPOD: function() {
     console.log(neoURL);
@@ -44,5 +55,4 @@ export default {
   deleteFavorite: function(id, url) {
     return axios.delete("/"+id+"/delete", {favUrl: url});
   }
-
 };
