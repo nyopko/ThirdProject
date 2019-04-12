@@ -33,7 +33,7 @@ class App extends Component {
             <Route exact path="/media" component={Media} />
             <Route exact path="/resources" component={Resources} />
           </Switch>
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </Router>
     );
