@@ -1,0 +1,18 @@
+.input-field {
+    width: 225px;
+
+    color: transparent;
+    -webkit-transition: color 0.2s ease;
+    transition: color 0.2s ease;
+}
+
+
+.input-group-addon{
+    margin-left: 10px;
+    margin-top: 25px;
+
+}
+
+
+
+

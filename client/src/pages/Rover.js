@@ -8,7 +8,7 @@ class App extends Component {
     return (
       <div className="roverPage">
     
-      <Header />
+      
       <RoverWrapper />
       </div>
     );

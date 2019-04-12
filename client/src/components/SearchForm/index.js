@@ -9,21 +9,24 @@ function SearchForm(props) {
                     <div className="row">
                         <div className="col s12">
                         <div className="card-panel">
-                            <div class="container">
+                            <div className="container">
                                 <form>
-                                    <div class="input-group">
-                                        <div class="input-field">
+                                    <div className="input-group">
+                                    
+                                        <div className="input-field">
+                                        
                                             <input
                                             onChange={props.handleInputChange}
                                             value={props.value}
                                             search="search"
                                             name="search"
                                             />
-                                            <label class="label-icon" for="search">
-                                                <i class="material-icons">search</i>
+                                            <label className="label-icon" htmlFor="search" >
+                                                <i className="material-icons" >search</i>
                                             </label>
+                                            
                                         </div>
-                                        <button onClick={props.handleFormSubmit} class="input-group-addon btn">search</button>
+                                        <button onClick={props.handleFormSubmit} className="input-group-addon btn">search</button>
                                     </div>
                                 </form>
                             </div>
