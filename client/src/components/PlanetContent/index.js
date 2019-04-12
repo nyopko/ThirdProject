@@ -1,8 +1,11 @@
 import React, { Component } from "react";
 import './style.css';
 import solarsystem from '../img/solarsystem.jpg';
+
 import planets from '../../planets.json';
 import Modal from 'react-modal';
+
+// import {  } from '../img';
 
 const customStyles = {
     content: {
@@ -102,8 +105,9 @@ class PlanetContent extends Component {
                 >
 
                     <h2 ref={subtitle => this.subtitle = subtitle}>{this.state.planet.name}</h2>
+                    <div><img src={this.state.planet.image} alt=""></img></div>
                     <div>Moons: {this.state.planet.moons}</div>
-                    <div>Revolution: {this.state.planet.revolution}</div>
+                     <div>Revolution: {this.state.planet.revolution}</div>
                     <div>Rotation: {this.state.planet.rotation}</div>
                     <div>Diameter: {this.state.planet.diameter}</div>
                     <div>Average temperature: {this.state.planet.average_temperature}</div>
