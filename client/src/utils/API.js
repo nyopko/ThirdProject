@@ -34,7 +34,25 @@ export default {
   grabAPOD: function() {
     console.log(neoURL);
     return axios.get(neoURL)
+  },
 
-}
+  getUserInfo: function(email) {
+    return axios.get("/get_user", {email: email});
+  },
 
+  newUser: function(userInfo) {
+    return axios.post("/new_user", userInfo);
+  },
+
+  addFavorite: function(urlInfo) {
+    return axios.post("/add_url", urlInfo);
+  },
+
+  getUserFavorites: function(id) {
+    return axios.get("/"+id+"/favorites");
+  },
+
+  deleteFavorite: function(id, url) {
+    return axios.delete("/"+id+"/delete", {favUrl: url});
+  }
 };
