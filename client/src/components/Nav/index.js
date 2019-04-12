@@ -63,7 +63,7 @@ class Nav extends Component {
                     <li><a href="/planets">Planets</a></li>
                     <li><a href="/rover">Rover</a></li>
                     <li><a href="/resources">Resources</a></li>
-                    <li><button onClick={this.modalClick}>Login</button></li>
+                    <li onClick={this.modalClick}>Login</li>
                 </ul>
             </div>
         </nav>

@@ -19,7 +19,7 @@ function SearchForm(props) {
                                             search="search"
                                             name="search"
                                             />
-                                            <label className="label-icon" for="search">
+                                            <label className="label-icon" forHTML="search">
                                                 {/* <i className="material-icons">search</i> */}
                                             </label>
                                         </div>
