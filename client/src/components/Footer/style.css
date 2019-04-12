@@ -6,4 +6,17 @@ footer{
 .github {
     width: 32px;
     height: 32px;
+    margin-right: 10px;
+    margin-left: 10px
+}
+
+.page-footer {
+    margin-top: 578px;
+}
+
+.container {
+    padding-left: 168px;
+    padding-right: 211px;
+    margin-left: 260px;
+
 }
