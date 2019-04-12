@@ -1,13 +1,8 @@
 import React, { Component } from "react";
 import './style.css';
-import NEO from '../NEO';
-import Daily from '../Daily';
 import './style.css';
-import API from "../../utils/API";
-import M from 'materialize-css';
-import axios from "axios"
-import RoverContent from "../CuriosityContent";
-import CuriosityContent from "../CuriosityContent"
+import axios from "axios";
+import CuriosityContent from "../CuriosityContent";
 require("dotenv").config();
 
 class CuriosityWrapper extends Component {

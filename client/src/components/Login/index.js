@@ -62,7 +62,7 @@ modalClick=event=>{
                     onRequestClose={this.closeModal}
                     style={customStyles}
                     contentLabel="Login Modal"
-                >
+                    >
                      <div className="container">
                     <div className="input-field">
                         {/* <i class="material-icons prefix">person</i> */}

@@ -34,7 +34,6 @@ export default {
   grabAPOD: function() {
     console.log(neoURL);
     return axios.get(neoURL)
-
-}
+},
 
 };
