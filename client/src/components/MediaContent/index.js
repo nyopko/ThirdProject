@@ -10,7 +10,7 @@ function MediaContent(props) {
                         <div className="row">
                             <div className="col s4 m2">
                             <p>{props.title}</p>
-                            <p> {props.imgURL}</p>
+                            <img src={props.imgURL} alt="previewPic" className="previewPic" />
                     
                         </div>
                     </div>

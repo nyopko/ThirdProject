@@ -1,7 +1,6 @@
 import React from 'react';
 import './style.css';
-import github from '../img/GitHub-icon.png'
-import githubLight from '../img/GitHub-icon-Light.png'
+import githubLight from '../img/GitHub-icon-Light.png';
 
 function Footer() {
   return (

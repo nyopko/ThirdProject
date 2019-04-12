@@ -62,7 +62,7 @@ modalClick=event=>{
                     onRequestClose={this.closeModal}
                     style={customStyles}
                     contentLabel="Login Modal"
-                >
+                    >
                      <div className="container">
                     <div className="input-field">
                         {/* <i class="material-icons prefix">person</i> */}
@@ -72,7 +72,7 @@ modalClick=event=>{
                     <div className="input-field">
                         {/* <i class="material-icons prefix">lock</i> */}
                         <input type="password" id="pass"/>
-                        <label for="pass">Password</label>
+                        <label forHTML="pass">Password</label>
                     </div><br/>
                     <div className="form-field">
                         <button className="btn-large waves-effect waves-dark">Login</button>
