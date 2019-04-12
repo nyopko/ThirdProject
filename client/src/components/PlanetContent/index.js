@@ -122,12 +122,9 @@ class PlanetContent extends Component {
 }
 
 
-<<<<<<< HEAD
-=======
 
 
 
 
 
->>>>>>> 10636b58111b47e45bf6cc4841aa62b1f9e13539
 export default PlanetContent;
