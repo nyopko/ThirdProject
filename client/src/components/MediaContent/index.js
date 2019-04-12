@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 
-function MediaContent() {
+function MediaContent(props) {
     return (
         <div className="mediaContent">
             <div className="row">
@@ -9,6 +9,9 @@ function MediaContent() {
                     <div className="card-panel">
                         <div className="row">
                             <div className="col s4 m2">
+                            <p>{props.title}</p>
+                            <p> {props.imgURL}</p>
+                    
                         </div>
                     </div>
                 </div>
