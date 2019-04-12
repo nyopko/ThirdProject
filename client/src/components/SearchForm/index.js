@@ -3,7 +3,7 @@ import './style.css';
 
 function SearchForm(props) {
     return (
-        <div className="main">
+        <div className="searchForm">
             <div className="row">
                 <div className="col s12 m9">
                     <div className="row">
