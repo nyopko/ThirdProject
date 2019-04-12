@@ -53,6 +53,8 @@ class MediaWrapper extends Component {
                 return <MediaContent
                 title={result.data[0].title}
                 imgURL={result.links[0].href}
+                info={result.data[0].description}
+                link={result.href}
                  />
                  
               })

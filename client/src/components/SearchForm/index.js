@@ -23,7 +23,7 @@ function SearchForm(props) {
                                                 {/* <i className="material-icons">search</i> */}
                                             </label>
                                         </div>
-                                        <button onClick={props.handleFormSubmit} class="input-group-addon btn">search</button>
+                                        <button onClick={props.handleFormSubmit} id="searchButton" class="input-group-addon btn">search</button>
                                     </div>
                                 </form>
                             </div>
