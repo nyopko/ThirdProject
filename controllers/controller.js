@@ -39,8 +39,9 @@ module.exports = {
             return data;
         })
     },
-    findItem: function(req, res){
+    findUrls: function(req, res){
         db.Favorites.findAll({
+            attributes: ['url'],
             where: {
                 UserId: req.params.user
             }
@@ -50,77 +51,36 @@ module.exports = {
             return data;
         })
     },
-    findVideos: function(req, res){
-        db.Favorites.findAll({
-            attributes: [videoUrl],
-            where: {
-                UserId: req.params.user
-            }
-        }).then(data => {
-            console.log(data);
-            res.json(data);
-            return data;
-        })
-    },
-    findAudio: function(req, res){
-        db.Favorites.findAll({
-            attributes: [audioUrl],
-            where: {
-                UserId: req.params.user
-            }
-        }).then(data => {
-            console.log(data);
-            res.json(data);
-            return data;
-        })
-    },
-    findImages: function(req, res){
-        db.Favorites.findAll({
-            attributes: [imageUrl],
-            where: {
-                UserId: req.params.user
-            }
-        })
-    },
-    addFavVideo: function(req, res){
+    addFavUrl: function(req, res){
         let newFav = {
             UserId: req.body.userId,
-            videoUrl: req.body.favUrl
+            url: req.body.favUrl,
+            media_type: req.body.media_type
         };
 
-        db.Favorites.create(newFav).then(data => {
-            console.log(data);
-            res.json(data);
-        })
-    },
-    addFavAudio: function(req, res){
-        let newFav = {
-            UserId: req.body.userId,
-            videoUrl: req.body.favUrl
-        }
-
-        db.Favorites.create(newFav).then(data => {
-            console.log(data);
-            res.json(data);
-        })
-    },
-    addFavImage: function(req, res){
-        let newFav = {
-            UserId: req.body.userId,
-            imageUrl: req.body.favUrl
-        }
-
-        db.Favorites.create(newFav).then(data => {
-            console.log(data);
-            res.json(data);
+        db.Favorites.findAll({
+            attributes: ['url'],
+            where: {
+                UserId: newFav.UserId,
+                url: newFav.url
+            }
+        }).then(data => {
+            if(!data[0]){
+                db.Favorites.create(newFav).then(data => {
+                    console.log(data);
+                    res.json(data);
+                })
+            }
+            else {
+                res.json({status: "Video URL already exists"})
+            }
         })
     },
     remove: function(req, res){
-        // remove a favorite item 
         db.Favorites.destroy({
             where: {
                 userId: req.params.user,
-                videoUrl: req.body.favUrl
+                [videoUrl]: req.body.favUrl
             }
         }).then(data => {
             console.log(data);

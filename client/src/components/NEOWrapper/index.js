@@ -1,14 +1,17 @@
 import React, { Component } from "react";
 import './style.css';
 import NEO from '../NEO';
-import Daily from '../Daily';
 import './style.css';
 import API from "../../utils/API";
 import M from 'materialize-css';
-import NEOWrapper from "../NEOWrapper";
+import moment from "moment"
 require("dotenv").config();
 
-class SidebarWrapper extends Component {
+
+var dateFormatted = moment();
+dateFormatted = moment(dateFormatted).format("YYYY-MM-DD");
+
+class NEOWrapper extends Component {
 
   state = {
     result: {}
@@ -24,19 +27,21 @@ class SidebarWrapper extends Component {
       }
 
     dailyPull () {
-        API.grab()
-          .then(res => this.setState({ result: res.data }))
+      console.log(API);
+        API.grabAPOD()
+          .then(res => {
+          console.log(dateFormatted);
+          return (this.setState({ result: res.data.near_earth_objects[dateFormatted][0] }))})
           .catch(err => console.log(err));
       };    
 
   render(){
   return (
-      <div className="sidebar">
-        <NEOWrapper />
-        <Daily 
-        title={this.state.result.title}
-        url={this.state.result.url}
-        explanation={this.state.result.explanation}
+      <div className="neoWrapper">
+        <NEO
+        // title={this.state.result.title}
+        name={this.state.result.name}
+        // explanation={this.state.result.explanation}
         />
             </div>
             );
@@ -44,4 +49,4 @@ class SidebarWrapper extends Component {
   }
 }
 
-export default SidebarWrapper;
+export default NEOWrapper;

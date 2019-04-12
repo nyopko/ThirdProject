@@ -1,16 +1,13 @@
 module.exports = function(sequelize, DataTypes) {
     var Favorites = sequelize.define("Favorites", {
-        videoUrl: {
+        url: {
             type: DataTypes.STRING,
-            allowNull: true
+            allowNull: false,
+            unique: true
         },
-        imageUrl: {
+        media_type: {
             type: DataTypes.STRING,
-            allowNull: true
-        },
-        audioUrl: {
-            type: DataTypes.STRING,
-            allowNull: true
+            allowNull: false
         }
     });
 

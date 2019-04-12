@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 
-function NEO() {
+function NEO(props) {
   return (
     <div className="row">
     <div className="col">
@@ -13,7 +13,7 @@ function NEO() {
             </div>
             <div className="row">
                 <div className="col">
-                    <h5 className="center-align">Near Earth Objects</h5>
+                    <h5 className="center-align">{props.name}</h5>
                 </div>
             </div>
         </div>
