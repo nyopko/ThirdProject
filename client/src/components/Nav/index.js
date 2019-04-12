@@ -2,21 +2,69 @@ import React, { Component } from 'react';
 import "./style.css";
 import Modal from 'react-modal';
 
+const customStyles = {
+    content: {
+        top: '50%',
+        left: '50%',
+        right: 'auto',
+        bottom: 'auto',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)'
+    }
+  };
 
-function Nav() {
+  
+
+
+
+class Nav extends Component {
+
+    constructor(props) {
+        super(props);
+    
+        this.state = {
+            modalIsOpen: false,
+        };
+    
+        this.openModal = this.openModal.bind(this)
+        this.afterOpenModal = this.afterOpenModal.bind(this);
+        this.closeModal = this.closeModal.bind(this);
+    }
+    
+    closeModal() {
+        this.setState({ modalIsOpen: false });
+    }
+    
+    afterOpenModal() {
+        // references are now sync'd and can be accessed.
+        // this.subtitle.style.color = '#f00';
+      }
+    
+    openModal () {
+        
+        this.setState({ modalIsOpen: true });
+    
+    }
+    
+    modalClick=event=>{
+        event.preventDefault()
+        this.openModal()
+    }
+
+
+    render(){
     return <div className="nav">
         <nav>
             <div className="nav-wrapper">
                 <a href="google.com" className="brand-logo">Space!</a>
-      <ul id="nav-mobile" className="right hide-on-med-and-down">
-        <li><a href="/home">Home</a></li>
-        <li><a href="/hubble">Hubble</a></li>
-        <li><a href="/media">Media</a></li>
-        <li><a href="/planets">Planets</a></li>
-        <li><a href="/rover">Rover</a></li>
-        <li><a href="/resources">Resources</a></li>
-      </ul>
-      
+                <ul id="nav-mobile" className="right hide-on-med-and-down">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/media">Media</a></li>
+                    <li><a href="/planets">Planets</a></li>
+                    <li><a href="/rover">Rover</a></li>
+                    <li><a href="/resources">Resources</a></li>
+                    <li onClick={this.modalClick}>Login</li>
+                </ul>
             </div>
         </nav>
 
@@ -24,7 +72,7 @@ function Nav() {
                     isOpen={this.state.modalIsOpen}
                     onAfterOpen={this.afterOpenModal}
                     onRequestClose={this.closeModal}
-                    // style={customStyles}
+                    style={customStyles}
                     contentLabel="Login Modal"
                 >
                      <div className="container">
@@ -49,6 +97,7 @@ function Nav() {
                 </Modal>
 
     </div>
+}
 }
 
 export default Nav;
