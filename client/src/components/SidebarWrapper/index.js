@@ -31,7 +31,7 @@ class SidebarWrapper extends Component {
 
   render(){
   return (
-      <div className="sidebar">
+      <div className="sidebar" >
         <NEOWrapper />
         <Daily 
         title={this.state.result.title}

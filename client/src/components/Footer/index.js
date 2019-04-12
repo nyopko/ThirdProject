@@ -14,20 +14,20 @@ function Footer() {
                     <a href="https://github.com/DanielSchauer">
                     <img className="github" alt="GitHub" src={githubLight}></img>
                     </a>
-                    Daniel's GitHub
+                    Daniel's GitHub  
                     <a href="https://github.com/slacker2222">
                     <img className="github" alt="GitHub" src={githubLight}></img>
                     </a>
-                    Stacy's GitHub
-                    </p>
+                    Stacy's GitHub     
                     <a href="https://github.com/nyopko">
                     <img className="github" alt="GitHub" src={githubLight}></img>
                     </a>
-                    Nick's GitHub
+                    Nick's GitHub     
                     <a href="https://github.com/jphillips37">
                     <img className="github" alt="GitHub" src={githubLight}></img>
                     </a>
-                    John's GitHub
+                    John's GitHub     
+                    </p>
                 </div>
             </div>
         </div>
