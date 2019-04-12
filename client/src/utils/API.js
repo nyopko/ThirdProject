@@ -28,7 +28,7 @@ export default {
   imgGet: function(query) {
     console.log(imgURL);
     return axios.get(imgURL + query);
-  }
+  },
 
 
   grabAPOD: function() {
