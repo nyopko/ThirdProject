@@ -80,7 +80,8 @@ module.exports = {
         db.Favorites.destroy({
             where: {
                 userId: req.params.user,
-                url: req.body.favUrl
+                [videoUrl]: req.body.favUrl
+
             }
         }).then(data => {
             console.log(data);
