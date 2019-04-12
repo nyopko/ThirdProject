@@ -125,6 +125,21 @@
         "diameter": "2,715,395 mi",
         "average_temperature": "9,941°F (surface temperature)",
         "cool_facts": "The Sun is 4.6 billion years old. When all the Hydrogen has been burned, the Sun will continue for about 130 million more years, burning Helium, during which time it will expand to the point that it will engulf Mercury and Venus and the Earth. At this stage it will have become a red giant"
+      },
+
+      {
+        "id": 11,
+        "name": "Moon",
+        "image": "https://thumbs-prod.si-cdn.com/CWSJLq_yzcmQyFB5A4jfcU8YLvg=/800x600/filters:no_upscale()/https://public-media.si-cdn.com/filer/ca/05/ca055340-355c-4d62-bdf7-3c79c947b327/moonmoon_moon.jpg",
+        "moons": "0",
+        "revolution": "27.32 days (Revolves around Earth",
+        "rotation":  "27" ,
+        "diameter": "1,079.6 mi",
+        "average_temperature": "As low as -280°F  when sun is down,  up to 260°F when sun is up",
+        "cool_facts": "The Moon is a dusty ball of rock that is roughly a quarter of the size of Earth.  It has mountains, huge craters, and flat planes called 'seas' that ar emade of hardened lava. The moon is Earth's only satellite (a celestial body that orbits a planet)  Although the Moon shines bright in the night sky, it doesn’t produce its own light. We see the Moon because it reflects light from the Sun.  Ever noticed how the Moon appears to change shape each night? That’s because as the Moon orbits the Earth, the Sun lights up different parts of its surface – so it’s just our view of the Moon that’s changing, not the Moon itself. On July 20, 1969, Neil Armstrong became the first human to step on the moon. "
       }
+
+      
+      
 
 ]
