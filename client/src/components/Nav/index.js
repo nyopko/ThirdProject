@@ -1,5 +1,6 @@
-import React from "react";
+import React, { Component } from 'react';
 import "./style.css";
+import Modal from 'react-modal';
 
 
 function Nav() {
@@ -19,9 +20,36 @@ function Nav() {
       
             </div>
         </nav>
+
+                    <Modal
+                    isOpen={this.state.modalIsOpen}
+                    onAfterOpen={this.afterOpenModal}
+                    onRequestClose={this.closeModal}
+                    // style={customStyles}
+                    contentLabel="Login Modal"
+                >
+                     <div className="container">
+                    <div className="input-field">
+                        {/* <i class="material-icons prefix">person</i> */}
+                        <input type="text" id="username"/>
+                        <label for="username">Username</label>
+                    </div><br/>
+                    <div className="input-field">
+                        {/* <i class="material-icons prefix">lock</i> */}
+                        <input type="password" id="pass"/>
+                        <label for="pass">Password</label>
+                    </div><br/>
+                    <div className="form-field">
+                        <button className="btn-large waves-effect waves-dark">Login</button>
+                    </div>
+                </div>
+                    <br/>
+                    <br/>
+                    <button className="btn-small waves-effect waves-dark" onClick={this.closeModal}>close</button>
+                    
+                </Modal>
+
     </div>
 }
-
-
 
 export default Nav;
