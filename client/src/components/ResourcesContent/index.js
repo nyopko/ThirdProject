@@ -9,7 +9,7 @@ function ResourcesContent() {
                     <div className="card-panel">
                         <div className="row">
                             <div className="col s4 m2">
-                            <h5>Online Activities</h5>
+                                <h5>Online Activities</h5>
                                 <p> <a href="https://www.esa.int/kids/en/home"> Kerbal Space Program: Create and manage your own space program.  This is definitely for older kids who like a challenge </a>
                                 </p>
                                 <p> <a href="https://www.w3schools.com/html/">Galaxy Zoo: See the planets, asteroid belt, and comets in 3-D </a>
@@ -38,9 +38,7 @@ function ResourcesContent() {
                                 </p>
                                 <p> <a href="https://www.esa.int/kids/en/home"> ESA Kids: European Space Agency features space news, information, animations and downloads for kids aged between 6 and 12. </a>
                                 </p>
-                                <p> <a href="https://www.solarsystemscope.com/"> Solar System Scope is a model of Solar System, Night sky and Outer Space in real time, with accurate positions of objects and lots of interesting facts.
-
- </a>
+                                <p> <a href="https://www.solarsystemscope.com/"> Solar System Scope is a model of Solar System, Night sky and Outer Space in real time, with accurate positions of objects and lots of interesting facts.</a>
                                 </p>
                             </div>
                         </div>
@@ -74,7 +72,7 @@ function ResourcesContent() {
                                 </p>
                                 <p> <a href="http://www.silvergames.com/en/rebuild-the-universe">Rebuild the Universe </a>
                                 </p>
-                    
+
                             </div>
                         </div>
                     </div>
@@ -85,8 +83,8 @@ function ResourcesContent() {
                     <div className="card-panel">
                         <div className="row">
                             <div className="col s4 m2">
-                            <h5>Space STEAM Activities</h5>
-                            <p> <a href="http://stem-works.com/subjects/12-space/activities">Stem Works:  Lots of Stem activities for all ages! </a>
+                                <h5>Space STEAM Activities</h5>
+                                <p> <a href="http://stem-works.com/subjects/12-space/activities">Stem Works:  Lots of Stem activities for all ages! </a>
                                 </p>
                                 <p> <a href="http://stem-works.com/subjects/12-space/activities/628">Build a Galaxy:  3D modeling and astronomy. Students will learn through the activity and complete a hands on project while learning how everything in space works!  </a>
                                 </p>
@@ -119,8 +117,7 @@ function ResourcesContent() {
                     <div className="card-panel">
                         <div className="row">
                             <div className="col s4 m2">
-                                <h5>Next Generation Science Teaching Standards:</h5>
-                                <br/>
+                                <h5>Next Generation Science Teaching Standards</h5>
                                 <h6>Grades K-2</h6>
                                 <p> <a href="https://www.nextgenscience.org/pe/1-ess1-2-earths-place-universe">Earth's Place in the Universe: Use observations of the sun, moon, and stars to describe patterns that can be predicted. Grades K-2   </a>
                                 </p>
@@ -128,7 +125,7 @@ function ResourcesContent() {
                                 </p>
                                 <p> <a href="https://www.nextgenscience.org/pe/1-ess1-2-earths-place-universe">Space Systems: Patterns and Cycles: Grades K-2 </a>
                                 </p>
-                               
+
                                 <h6>Grades 3-5</h6>
                                 <p> <a href="https://www.nextgenscience.org/pe/5-ess1-2-earths-place-universe">Earth's Place in the Universe: Support an argument that the apparent brightness of the sun and stars is due to their relative distances from the Earth.  Grades 3-5 </a>
                                 </p>
@@ -152,7 +149,7 @@ function ResourcesContent() {
                                 </p>
                                 <p> <a href="https://www.nextgenscience.org/pe/hs-ess2-4-earths-systems">Earth's Place in the Universe 2: Construct an explanation of the Big Bang theory based on astronomical evidence of light spectra, motion of distant galaxies, and composition of matter in the universe.  Grades 9-12 </a>
                                 </p>
-                                
+
                                 <p> <a href="https://www.nextgenscience.org/dci-arrangement/hs-ess1-earths-place-universe">Earth's Place in the Universe DCI Arrangements: Communicate scientific ideas about the way stars, over their life cycle, produce elements.  Grades 9-12 </a>
                                 </p>
                                 <p> <a href="https://www.nextgenscience.org/dci-arrangement/hs-ess2-earths-systems">Earth's Place in the Universe DCI Arrangements 2: Grades 9-12</a>
@@ -167,5 +164,5 @@ function ResourcesContent() {
         </div>
     );
 }
-  
-  export default ResourcesContent;
+
+export default ResourcesContent;

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import './style.css';
-import solarsystem from '../img/solarsystem.jpg';
-
+import solarsystem from '../img/old.jpg';
 import planets from '../../planets.json';
 import Modal from 'react-modal';
 
@@ -14,7 +13,9 @@ const customStyles = {
         right: 'auto',
         bottom: 'auto',
         marginRight: '-50%',
-        transform: 'translate(-50%, -50%)'
+        transform: 'translate(-50%, -50%)',
+        width: '700px',
+        height: '550px'
     }
 };
 
@@ -100,7 +101,7 @@ class PlanetContent extends Component {
                 >
 
                     <h2 ref={subtitle => this.subtitle = subtitle}>{this.state.planet.name}</h2>
-                    <div><img src={this.state.planet.image} alt=""></img></div>
+                    <div><img id="modalPics" src={this.state.planet.image} alt="modalPics"></img></div>
                     <div>Moons: {this.state.planet.moons}</div>
                      <div>Revolution: {this.state.planet.revolution}</div>
                     <div>Rotation: {this.state.planet.rotation}</div>
@@ -109,7 +110,7 @@ class PlanetContent extends Component {
                     <div>Cool Facts: {this.state.planet.cool_facts}</div>
                     <br/>
                     <br/>
-                    <button onClick={this.closeModal}>close</button>
+                    <button onClick={this.closeModal}>CLOSE</button>
                     
                     <div></div>
                 </Modal>
