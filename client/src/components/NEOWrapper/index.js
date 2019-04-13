@@ -30,7 +30,7 @@ class NEOWrapper extends Component {
       console.log(API);
         API.grabAPOD()
           .then(res => {
-          console.log(res.data.near_earth_objects[dateFormatted][0].close_approach_data[0].relative_velocity);
+          console.log(res.data.near_earth_objects[dateFormatted][0].is_potentially_hazardous_asteroid);
           return (this.setState({ result: res.data.near_earth_objects[dateFormatted][0], speedRes: res.data.near_earth_objects[dateFormatted][0].close_approach_data[0].relative_velocity }))})
           .catch(err => console.log(err));
       };    
@@ -43,6 +43,7 @@ class NEOWrapper extends Component {
         name={this.state.result.name}
         info={this.state.result.nasa_jpl_url}
         size={this.state.result.absolute_magnitude_h}
+        // danger={this.state.result && this.state.result.is_potentially_hazardous_asteroid.toString()}
         // speed={this.state.speedRes.miles_per_hour}
         />
             </div>

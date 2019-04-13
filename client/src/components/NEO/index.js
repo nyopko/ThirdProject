@@ -12,7 +12,8 @@ function NEO(props) {
                 <div className="col">
                     <h5>Here's what's passing by Earth today!</h5>
                     <p className="center-align">Name of Object: <b>{props.name}</b></p>
-                    <p className="center-align">Magnitude: <b>{props.size} h</b></p>
+                    <p className="center-align">Magnitude (H): <b>{props.size}</b></p>
+                    <p className="center-align">Potentially Dangerous? <b>{props.danger}</b></p>
                     <p className="center-align"><a href={props.info}>More Info</a></p>
                 </div>
             </div>

@@ -20,6 +20,7 @@ class Login extends Component  {
 
     this.state = {
         modalIsOpen: false,
+        
     };
 
     this.openModal = this.openModal.bind(this)

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import './style.css';
-import solarsystem from '../img/solarsystem.jpg';
-
+import solarsystem from '../img/old.jpg';
 import planets from '../../planets.json';
 import Modal from 'react-modal';
 
