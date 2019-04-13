@@ -13,7 +13,7 @@ function MediaContent(props) {
                             <p>{props.info}</p>
                             <a href={props.link}>Download Pictures/Videos</a>
                             <br />
-                            <button id="favButton">Test button here.</button>
+                            {/* <button id="favButton">Test button here.</button> */}
                             <br />
                             <img src={props.imgURL} alt="previewPic" className="previewPic" />
 
