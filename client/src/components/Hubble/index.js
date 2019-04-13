@@ -10,7 +10,7 @@ function Hubble() {
             <div className="col s4 m2">
               <img id="homePlanet" src="https://s23527.pcdn.co/wp-content/uploads/2017/04/nasa-gallery.jpg.optimal.jpg" alt="rover" className="responsive-img" />
             </div>
-            <div className="col s8 m10">
+            <div id="imgSearchText" className="col s8 m10">
               <h4>NASA Image and Video Search</h4>
               <p>This page can be used to search and download images and videos from NASA's extensive database of Space related content.</p>
               <p> <a href="/media"> To search the video and image library click here. </a></p>
