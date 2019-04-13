@@ -8,7 +8,7 @@ function Hubble() {
         <div className="card-panel">
           <div className="row">
             <div className="col s4 m2">
-              <img id="homePlanet" src="https://i.ytimg.com/vi/libKVRa01L8/maxresdefault.jpg" alt="rover" className="responsive-img" />
+              <img id="homePlanet" src="https://s23527.pcdn.co/wp-content/uploads/2017/04/nasa-gallery.jpg.optimal.jpg" alt="rover" className="responsive-img" />
             </div>
             <div className="col s8 m10">
               <h4>NASA Image and Video Search</h4>

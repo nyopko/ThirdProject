@@ -2,5 +2,6 @@
     width: 350px;
     float: right;
     margin-right: 20px;
-    background-color: gray; 
+    height: 80%;
+    /* background-color: gray;  */
 }
