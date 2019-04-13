@@ -73,7 +73,7 @@ class Daily extends Component {
         </Modal>
         </div>
 
-    <div className="row">
+    <div id="dailyCard" className="row">
     <div className="col">
         <div className="card-panel">
             <div className="row">
