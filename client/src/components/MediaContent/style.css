@@ -1,6 +1,10 @@
 .previewPic{
-    float: left;
-    margin-top: 10px;
+    /* float: left; */
+    margin-left: 80px;
     height: 250px;
-    width: 250px;
+    width: 350px;
+}
+
+#bodyText{
+    margin-right: 100px;
 }
