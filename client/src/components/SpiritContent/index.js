@@ -9,7 +9,8 @@ function SpiritContent(props) {
                     <div className="card-panel">
                         <div className="row">
                             <div className="col s4 m2">
-                            <p>Spirit Pic</p>
+                            <h5 className="center-align">Spirit Rover</h5>
+                            <h6 className="center-align">Date Taken: {props.dateTaken}</h6>
                             <img src={props.urlSpirit} alt="spiritPic" className="responsive-img" id="spiritPic"/>
                         </div>
                     </div>

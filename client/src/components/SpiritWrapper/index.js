@@ -33,16 +33,19 @@ class SpiritWrapper extends Component {
           });
         } else { 
           let photoValue = "";
+          let dateValue ="";
 
           // look for photos
           if (!!res.data.photos[0]) {
             photoValue = res.data.photos[0].img_src;
+            dateValue = res.data.photos[0].earth_date;
           } else {
             photoValue = null;
           }
 
           this.setState({
-            firstPhoto: photoValue
+            firstPhoto: photoValue,
+            date: dateValue,
           });
         }
       });
@@ -54,6 +57,7 @@ class SpiritWrapper extends Component {
       <div className="class">
         <SpiritContent
           urlSpirit={this.state.firstPhoto}
+          dateTaken={this.state.date}
         />
       </div>
     );

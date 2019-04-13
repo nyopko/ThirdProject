@@ -7,8 +7,7 @@ import Planets from '../Planets';
 function Wrapper() {
   return (
       <div className="body">
-      <Header></Header>
-      <Mars></Mars>
+      <Mars />
       <Planets />
             </div>
             );

@@ -9,7 +9,8 @@ function CuriosityContent(props) {
                     <div className="card-panel">
                         <div className="row">
                             <div className="col s4 m2">
-                            <p>Curiosity Pic</p>
+                            <h5 className="center-align">Curiosity Rover</h5>
+                            <h6 className="center-align">Date Taken: {props.dateTaken}</h6>
                             <img src={props.urlCuriosity} alt="curiosityPic" className="responsive-img" id="curiosityPic"/>
                         </div>
                     </div>

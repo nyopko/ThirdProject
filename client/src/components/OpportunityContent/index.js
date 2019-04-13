@@ -9,7 +9,8 @@ function OpportunityContent(props) {
                     <div className="card-panel">
                         <div className="row">
                             <div className="col s4 m2">
-                            <p>Opportunity Pic</p>
+                            <h5 className="center-align">Opportunity Rover</h5>
+                            <h6 className="center-align">Date Taken: {props.dateTaken}</h6>
                             <img src={props.urlOpportunity} alt="opportunityPic" className="responsive-img" id="opportunityPic"/>
                         </div>
                     </div>

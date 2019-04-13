@@ -34,17 +34,20 @@ class CuriosityWrapper extends Component {
           });
         } else { // success
           let photoValue = "";
+          let dateValue ="";
 
           // check for photos
           if (!!res.data.photos[0]) {
             photoValue = res.data.photos[0].img_src;
+            dateValue = res.data.photos[0].earth_date;
           } else {
             photoValue = null;
           }
 
           // regardless of if photos come back:
           this.setState({
-            firstPhoto: photoValue
+            firstPhoto: photoValue,
+            date: dateValue,
           });
         }
       });
@@ -57,7 +60,7 @@ class CuriosityWrapper extends Component {
         <CuriosityContent
           // title={this.state.result.title}
           urlCuriosity={this.state.firstPhoto}
-        // explanation={this.state.result.explanation}
+          dateTaken={this.state.date}
         />
       </div>
     );

@@ -7,13 +7,13 @@ function NEO(props) {
     <div className="col">
         <div className="card-panel">
             <div className="row">
-                <div className="col">
-                    <img src="./NEO-image.jpg" alt="neo" className="responsive-img"/>
-                </div>
             </div>
             <div className="row">
                 <div className="col">
-                    <h5 className="center-align">{props.name}</h5>
+                    <h5>Here's what's passing by Earth today!</h5>
+                    <p className="center-align">Name of Object: <b>{props.name}</b></p>
+                    <p className="center-align">Magnitude: <b>{props.size} h</b></p>
+                    <p className="center-align"><a href={props.info}>More Info</a></p>
                 </div>
             </div>
         </div>

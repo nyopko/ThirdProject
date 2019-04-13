@@ -30,8 +30,8 @@ class NEOWrapper extends Component {
       console.log(API);
         API.grabAPOD()
           .then(res => {
-          console.log(dateFormatted);
-          return (this.setState({ result: res.data.near_earth_objects[dateFormatted][0] }))})
+          console.log(res.data.near_earth_objects[dateFormatted][0].close_approach_data[0].relative_velocity);
+          return (this.setState({ result: res.data.near_earth_objects[dateFormatted][0], speedRes: res.data.near_earth_objects[dateFormatted][0].close_approach_data[0].relative_velocity }))})
           .catch(err => console.log(err));
       };    
 
@@ -41,7 +41,9 @@ class NEOWrapper extends Component {
         <NEO
         // title={this.state.result.title}
         name={this.state.result.name}
-        // explanation={this.state.result.explanation}
+        info={this.state.result.nasa_jpl_url}
+        size={this.state.result.absolute_magnitude_h}
+        // speed={this.state.speedRes.miles_per_hour}
         />
             </div>
             );
