@@ -1,14 +1,29 @@
 import API from "./API";
-import React, { Component } from "react";
 
-class SpaceApp extends Component {
-    state = {}
-
-    newUser = (userInfo) => {
+let spaceApp = {
+    newUser: userInfo => {
         API.newUser(userInfo).then(res => {
-            this.setState({userName: res.data.name, userEmail: res.data.email, loggedIn: true})
+
+        })
+    },
+
+    newUrl: urlInfo => {
+        API.addFavorite(urlInfo).then(res => {
+
+        })
+    },
+
+    getUserFavorites: user => {
+        API.getUserFavorites(user).then(res => {
+
+        })
+    },
+
+    getUser: login => {
+        API.getUserInfo(login).then(res => {
+
         })
     }
 }
 
-export default SpaceApp;
+export default spaceApp;

@@ -36,8 +36,29 @@ export default {
     return axios.get(neoURL)
   },
 
-  getUserInfo: function(email) {
-    return axios.get("/get_user", {email: email});
+  getUserInfo: function(login) {
+    axios.get("/get_user", {email: login.email}).then(data => {
+      var userLogIn = {};
+      if(data.password === login.password) {
+        userLogIn = {
+          userName: data.name,
+          userEmail: data.email,
+          isLoggedIn: true
+        };
+
+        return userLogIn;
+      }
+
+      else {
+        userLogIn ={
+          userName: null,
+          userEmail: null,
+          isLoggedIn: false
+        }
+
+        return userLogIn;
+      }
+    })
   },
 
   newUser: function(userInfo) {
