@@ -1,5 +1,19 @@
 import React, { Component } from "react";
+import Modal from 'react-modal';
 import './style.css';
+
+const customStyles = {
+    content: {
+        top: '50%',
+        left: '50%',
+        right: 'auto',
+        bottom: 'auto',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)',
+        width: '700px',
+        height: '550px'
+    }
+  };
 
 class Daily extends Component {
     constructor(props) {
@@ -10,14 +24,55 @@ class Daily extends Component {
             // planet: 
         };
 
-    //     this.openModal = this.openModal.bind(this)
-    //     this.afterOpenModal = this.afterOpenModal.bind(this);
-    //     this.closeModal = this.closeModal.bind(this);
+        this.openModal = this.openModal.bind(this)
+        this.afterOpenModal = this.afterOpenModal.bind(this);
+        this.closeModal = this.closeModal.bind(this);
+    }
+
+    closeModal() {
+        this.setState({ modalIsOpen: false });
+    }
+    
+    afterOpenModal() {
+      }
+    
+    openModal () {
+        
+        this.setState({ modalIsOpen: true });
+    
+    }
+    
+    modalClick=event=>{
+        event.preventDefault()
+        this.openModal()
     }
     
     
     render(){    
   return (
+      <div className="daily">
+      <div id="modal">
+       <Modal
+                    isOpen={this.state.modalIsOpen}
+                    onAfterOpen={this.afterOpenModal}
+                    onRequestClose={this.closeModal}
+                    style={customStyles}
+                    contentLabel="Login Modal"
+        >
+        <div className="apodModalContent">
+            <div className="row">
+                <div className="col s12">
+                <h5 className="center-align">{this.props.title}</h5>
+                <p className="center-align"><span>{this.props.explanation}</span></p>
+                            <img src={this.props.url} alt="apodPic" className="apodModalPic" id="apodModalPic"/>
+                        </div>
+                    </div>
+                </div>
+            
+            
+        </Modal>
+        </div>
+
     <div className="row">
     <div className="col">
         <div className="card-panel">
@@ -31,14 +86,14 @@ class Daily extends Component {
                 <h5 className="center-align">{this.props.title}</h5>
                 <ul className="collapsible">
                     <li>
-                        <div className="collapsible-header">Click to learn more!</div>
-                            <div className="collapsible-body"><span>{this.props.explanation}</span></div>
+                        <div onClick={this.modalClick} className="collapsible-header">Click here to learn more!</div>
                     </li>
                 </ul>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
     );
 }
