@@ -65,11 +65,11 @@ class Daily extends Component {
                 <h5 className="center-align">{this.props.title}</h5>
                 <p className="center-align"><span>{this.props.explanation}</span></p>
                             <img src={this.props.url} alt="apodPic" className="apodModalPic" id="apodModalPic"/>
+                            <br />
+                            <button onClick={this.closeModal}>close</button>
                         </div>
                     </div>
                 </div>
-            
-            
         </Modal>
         </div>
 
