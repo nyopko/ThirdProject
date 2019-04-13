@@ -11,8 +11,12 @@ function Planets() {
               <img src="https://i.ytimg.com/vi/libKVRa01L8/maxresdefault.jpg" alt="rover"className="responsive-img"/>
                                 </div>
               <div className="col s8 m10">
-                <p>Links and Content for the Planets goes here
+                <h4>Our Solar Sytem's Planets</h4>
+                <p>Our solar system's planets come in two flavors; rocky planets that have solid ground (Mercury, Venus, Earth and Mars) and larger planets that are made up of gases (Jupiter, Saturn, Uranus, and Neptune). 
                                 </p>
+
+                <p> <a href="/rover"> Learn more about our solar system's planets. </a>
+                </p>
                                 </div>
                                 </div>
                                 </div>
