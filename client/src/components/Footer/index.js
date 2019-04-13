@@ -8,7 +8,9 @@ function Footer() {
     <div className="footer">
     <footer className="page-footer">
         <div className="container">
-        <p className="grey-text text-lighten-4">
+            <div className="row">
+                <div className="col s12">
+                    
                     <a href="https://github.com/DanielSchauer">
                     <img className="github" alt="GitHub" src={githubLight}></img>
                     </a>
@@ -25,10 +27,6 @@ function Footer() {
                     <img className="github" alt="GitHub" src={githubLight}></img>
                     </a>
                     John's GitHub     
-                    </p>
-            <div className="row">
-            
-                <div className="col l6 s12">
                     
                 </div>
             </div>
