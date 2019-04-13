@@ -8,7 +8,20 @@ class App extends Component {
     return (
       <div className="roverPage">
     
-      <Header />
+    <div className="main">
+    <div className="row">
+        <div className="col s12 m9">
+            <div className="row">
+                <div className="col s12">
+                    <div className="card-panel">
+                        <h2 className="">Mars Rover Pictures</h2>
+                    </div>
+                </div>
+            </div>
+           </div>
+          </div>
+         </div>  
+      
       <RoverWrapper />
       </div>
     );
