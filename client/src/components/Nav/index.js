@@ -53,7 +53,7 @@ class Nav extends Component {
     return <div className="nav">
         <nav>
             <div className="nav-wrapper">
-                <a href="/" className="brand-logo">Space!</a>
+                <a href="/" className="brand-logo">Space App</a>
                 <ul id="nav-mobile" className="right hide-on-med-and-down">
                     <li><a href="/">Home</a></li>
                     <li><a href="/media">Media</a></li>
