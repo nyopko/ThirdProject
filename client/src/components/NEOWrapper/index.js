@@ -46,6 +46,7 @@ class NEOWrapper extends Component {
         danger={this.state.result.is_potentially_hazardous_asteroid}
         feet={this.state.result.estimated_diameter && this.state.result.estimated_diameter.feet && this.state.result.estimated_diameter.feet.estimated_diameter_max.toFixed(2)}
         speed={parseFloat(this.state.result.close_approach_data && this.state.result.close_approach_data[0] && this.state.result.close_approach_data[0].relative_velocity &&  this.state.result.close_approach_data[0].relative_velocity.miles_per_hour).toFixed(2)}
+        distance={this.state.result.close_approach_data && this.state.result.close_approach_data[0] && this.state.result.close_approach_data[0].miss_distance && this.state.result.close_approach_data[0].miss_distance.miles}
         />
             </div>
             );

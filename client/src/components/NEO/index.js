@@ -15,6 +15,7 @@ function NEO(props) {
                     <p className="center-align">Magnitude (H): <b>{props.size}</b></p>
                     <p className="center-align">Size (ft): <b>{props.feet}</b></p>
                     <p className="center-align">Speed (mph): <b>{props.speed}</b></p>
+                    <p className="center-align">Distance from Earth (mi): <b>{props.distance}</b></p>
                     <p className="center-align">Potentially Dangerous? <b>{props.danger ? "True" : "False"}</b></p>
                     <p className="center-align"><a href={props.info}>More Info</a></p>
                 </div>
