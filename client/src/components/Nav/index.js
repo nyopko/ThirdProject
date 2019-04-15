@@ -13,12 +13,7 @@ const customStyles = {
     }
   };
 
-  
-
-
-
 class Nav extends Component {
-
     constructor(props) {
         super(props);
     
@@ -51,6 +46,13 @@ class Nav extends Component {
         this.openModal()
     }
 
+    handleInputChange = event => {
+        const value = event.target.value;
+        const name = event.target.name;
+        this.setState({
+            [name]: value
+        });
+    };
 
     render(){
     return <div className="nav">

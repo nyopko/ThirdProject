@@ -3,7 +3,7 @@ module.exports = function(sequelize, DataTypes) {
         url: {
             type: DataTypes.STRING,
             allowNull: false,
-            unique: true
+            unique: false
         },
         media_type: {
             type: DataTypes.STRING,

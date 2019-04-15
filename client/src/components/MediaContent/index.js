@@ -16,8 +16,6 @@ function MediaContent(props) {
                             <button id="favButton">Test button here.</button>
                             <br />
                             <img src={props.imgURL} alt="previewPic" className="previewPic" />
-
-                    
                         </div>
                     </div>
                 </div>

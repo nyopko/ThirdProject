@@ -3,6 +3,7 @@ import './style.css';
 import MediaContent from '../MediaContent';
 import SearchForm from '../SearchForm';
 import API from "../../utils/API";
+import app from "../../utils/app";
 
 class MediaWrapper extends Component {
 
@@ -55,6 +56,7 @@ class MediaWrapper extends Component {
                 imgURL={result.links[0].href}
                 info={result.data[0].description}
                 link={result.href}
+                getUser={app.getUser}
                  />
                  
               })
