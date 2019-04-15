@@ -62,7 +62,7 @@ class PlanetContent extends Component {
             <div className="PlanetContent">
                 <div className="row">
                     <div className="col s12">
-                        <div className="card-panel">
+                        <div id="planetCard" className="card-panel">
                             <div className="row">
                                 <div className="col s4 m2">
                                     <img src={solarsystem} alt="planets" className="planetPic" useMap="#Map" />
