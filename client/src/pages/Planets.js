@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PlanetContent from '../components/PlanetContent';
+import Footer from '../components/Footer';
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
                 <div className="col s12">
                   <div className="card-panel">
                     <h2 className="center-align">Interactive Solar System Map</h2>
+                    <h5 className="center-align">Click on a planet to learn more!</h5>
                   </div>
                 </div>
               </div>
@@ -19,6 +21,7 @@ class App extends Component {
           </div>
         </div>
       <PlanetContent />
+      <Footer />
       </div>
     );
   }
