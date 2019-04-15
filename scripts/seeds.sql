@@ -1,4 +1,5 @@
 use project_3;
+
 insert into users (name, email, password, createdAt, updatedAt) values ('new user 1', 'user1email@newuser.com', 'user1password', current_timestamp(), current_timestamp());
 insert into users (name, email, password, createdAt, updatedAt) values ('new user 2', 'user2email@newuser.com', 'user2password', current_timestamp(), current_timestamp());
 insert into users (name, email, password, createdAt, updatedAt) values ('new user 3', 'user3email@newuser.com', 'user3password', current_timestamp(), current_timestamp());

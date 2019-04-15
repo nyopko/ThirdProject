@@ -3,6 +3,7 @@ import './style.css';
 import MediaContent from '../MediaContent';
 import SearchForm from '../SearchForm';
 import API from "../../utils/API";
+import app from "../../utils/app";
 
 class MediaWrapper extends Component {
 
@@ -62,7 +63,36 @@ class MediaWrapper extends Component {
         }
       </div>
     );
-
+        handleFormSubmit = event => {
+          event.preventDefault();
+          this.imgPull(this.state.search);
+          
+        };
+  
+    render(){
+        return (
+            <div className="mediaWrapper">
+            <SearchForm
+      // value={this.state.search}
+      handleInputChange={this.handleInputChange}
+      handleFormSubmit={this.handleFormSubmit}
+      />
+            {
+              this.state.results.map(result => {
+                return <MediaContent
+                title={result.data[0].title}
+                imgURL={result.links[0].href}
+                info={result.data[0].description}
+                link={result.href}
+                getUser={app.getUser}
+                 />
+                 
+              })
+            }
+                  </div>
+                  );
+  
+    }
   }
 }
 
