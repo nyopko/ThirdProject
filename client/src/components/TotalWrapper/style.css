@@ -1,8 +1,15 @@
-.bodyWrapper{
-    width: 55%;
+ /* .bodyWrapper{
+    width: 100%;
     float: left;
 }
 
-/* .sidebarWrapper{
-    width: 25%;
+.sidebarWrapper{
+     width: 900px;
+    float: right;
 } */
+
+#total{
+    background-image: url("https://img.wallpapersafari.com/desktop/1920/1080/4/21/2OBQdl.jpg");
+    margin-bottom: -20px;
+    background-size: contain
+}

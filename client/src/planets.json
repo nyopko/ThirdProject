@@ -105,7 +105,7 @@
 
       {
         "id": 9,
-        "name": "Pluto the dwarf planet",
+        "name": "Pluto (Dwarf Planet)",
         "image": "https://planetary.s3.amazonaws.com/assets/images/9-small-bodies/2015/20151106_crop_p_color2_enhanced_release-superenhanced-2k-dc-ir-zld.png",
         "moons": "5",
         "revolution": "90,560 days (248 years)",

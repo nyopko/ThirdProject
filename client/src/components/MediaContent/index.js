@@ -9,13 +9,16 @@ function MediaContent(props) {
                     <div className="card-panel">
                         <div className="row">
                             <div className="col s4 m2">
+                            <img src={props.imgURL} alt="previewPic" className="previewPic" />
+                            </div>
+                            <div id="bodyText" className="col s8 m10">
                             <h5>{props.title}</h5>
                             <p>{props.info}</p>
                             <a href={props.link}>Download Pictures/Videos</a>
                             <br />
-                            <button id="favButton">Test button here.</button>
+                            {/* <button id="favButton">Test button here.</button>
                             <br />
-                            <img src={props.imgURL} alt="previewPic" className="previewPic" />
+                            <img src={props.imgURL} alt="previewPic" className="previewPic" /> */}
                         </div>
                     </div>
                 </div>

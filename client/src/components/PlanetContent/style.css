@@ -1,12 +1,20 @@
 .planetPic{
-    height: 342px;
-    width: 750px;
+    height: 585px;
+    width: 1281px;
 }
 
 .PlanetContent {
-    margin-top: 10px;
+    /* margin-top: 10px;
     margin-bottom: 10px;
-    background-color: red;
-    
+    background-color: red; */
+}
+
+#modalPics{
+    height: 300px;
+    width: 350px;
+}
+
+#planetCard{
+    margin-top: -40px;
 }
 

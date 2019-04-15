@@ -12,7 +12,6 @@ const customStyles = {
         transform: 'translate(-50%, -50%)'
     }
   };
-
 class Nav extends Component {
     constructor(props) {
         super(props);
@@ -58,14 +57,14 @@ class Nav extends Component {
     return <div className="nav">
         <nav>
             <div className="nav-wrapper">
-                <a href="google.com" className="brand-logo">Space!</a>
+                <a href="/" className="brand-logo">Space App</a>
                 <ul id="nav-mobile" className="right hide-on-med-and-down">
                     <li><a href="/">Home</a></li>
                     <li><a href="/media">Media</a></li>
                     <li><a href="/planets">Planets</a></li>
                     <li><a href="/rover">Rover</a></li>
                     <li><a href="/resources">Resources</a></li>
-                    <li onClick={this.modalClick}>Login</li>
+                    {/* <li onClick={this.modalClick}>Login</li> */}
                 </ul>
             </div>
         </nav>

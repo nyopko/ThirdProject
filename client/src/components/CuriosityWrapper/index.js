@@ -56,9 +56,8 @@ class CuriosityWrapper extends Component {
 
   render() {
     return (
-      <div className="class">
+      <div className="curiosityWrapper">
         <CuriosityContent
-          // title={this.state.result.title}
           urlCuriosity={this.state.firstPhoto}
           dateTaken={this.state.date}
         />
