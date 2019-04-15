@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import TotalWrapper from '../components/TotalWrapper';
+import Footer from '../components/Footer'
 
 
 
@@ -8,6 +9,7 @@ class App extends Component {
     return (
       <div className="homePage">
       <TotalWrapper />
+      <Footer />
       </div>
     );
   }

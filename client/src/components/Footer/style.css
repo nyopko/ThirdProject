@@ -1,6 +1,5 @@
 footer{
     text-align: center;
-    margin-top: 60%;
 }
 
 .github {
@@ -11,12 +10,12 @@ footer{
 }
 
 .page-footer {
-    margin-top: 578px;
+    text-align: center;
+    height: 75px;
+    background-color: #390b47
+    
 }
 
-/* .container {
-    padding-left: 168px;
-    padding-right: 211px;
-    margin-left: 260px;
-
-} */
+#nameLink{
+    color: white;
+}
