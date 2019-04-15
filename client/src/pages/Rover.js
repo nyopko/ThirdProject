@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import RoverWrapper from '../components/RoverWrapper';
+import Footer from '../components/Footer';
 
 
 class App extends Component {
@@ -21,6 +22,7 @@ class App extends Component {
         </div>
 
         <RoverWrapper />
+        <Footer />
       </div>
     );
   }

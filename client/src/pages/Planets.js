@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PlanetContent from '../components/PlanetContent';
+import Footer from '../components/Footer';
 
 class App extends Component {
   render() {
@@ -20,6 +21,7 @@ class App extends Component {
           </div>
         </div>
       <PlanetContent />
+      <Footer />
       </div>
     );
   }
