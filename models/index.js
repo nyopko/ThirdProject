@@ -9,7 +9,7 @@ var config = require("../config/config")[env];
 var db = {};
 
 if (process.env.JAWSDB_URL) {
-    var sequelize = new Sequelize(process.env.JAWSDB_URL;
+    var sequelize = new Sequelize(process.env.JAWSDB_URL);
 }
 else {
     var sequelize = new Sequelize(
